@@ -6,13 +6,73 @@
 'use strict';
 
 // ============================================================
+// Profile Manager
+// Stores named profiles; each profile gets its own progress key
+// ============================================================
+const Profiles = {
+  _LIST_KEY:   'aql-learn-profiles',
+  _ACTIVE_KEY: 'aql-learn-active-profile',
+
+  list() {
+    try {
+      return JSON.parse(localStorage.getItem(this._LIST_KEY) || '[]');
+    } catch { return []; }
+  },
+
+  // Returns false if name is blank or already exists (case-insensitive)
+  create(name) {
+    const trimmed = name.trim();
+    if (!trimmed) return false;
+    const existing = this.list();
+    if (existing.some(n => n.toLowerCase() === trimmed.toLowerCase())) return false;
+    existing.push(trimmed);
+    localStorage.setItem(this._LIST_KEY, JSON.stringify(existing));
+    return true;
+  },
+
+  setActive(name) {
+    const match = this.list().find(n => n.toLowerCase() === name.toLowerCase());
+    if (!match) return false;
+    localStorage.setItem(this._ACTIVE_KEY, JSON.stringify(match));
+    return true;
+  },
+
+  getActive() {
+    try {
+      return JSON.parse(localStorage.getItem(this._ACTIVE_KEY) || 'null');
+    } catch { return null; }
+  },
+
+  delete(name) {
+    const lower = name.toLowerCase();
+    const actual = this.list().find(n => n.toLowerCase() === lower);
+    if (!actual) return false;
+    const remaining = this.list().filter(n => n.toLowerCase() !== lower);
+    localStorage.setItem(this._LIST_KEY, JSON.stringify(remaining));
+    localStorage.removeItem('aql-learn-progress-v2:' + actual);
+    if ((this.getActive() || '').toLowerCase() === lower) {
+      localStorage.removeItem(this._ACTIVE_KEY);
+    }
+    return true;
+  }
+};
+
+// ============================================================
 // Progress Manager
-// Stores completed resource IDs in localStorage
+// Stores completed resource IDs in localStorage (per profile)
 // ============================================================
 const Progress = {
-  KEY: 'aql-learn-progress-v1',
+  get KEY() {
+    const active = Profiles.getActive();
+    return 'aql-learn-progress-v2:' + (active || '__default__');
+  },
 
   _cache: null,
+
+  // Flush cache so next load() reads the new profile's key
+  reload() {
+    this._cache = null;
+  },
 
   load() {
     if (this._cache) return this._cache;
@@ -113,6 +173,127 @@ function getTotalStats() {
     });
   });
   return { totalResources, totalTracks };
+}
+
+// ============================================================
+// Profile UI
+// ============================================================
+function switchProfile(name) {
+  Profiles.setActive(name);
+  Progress.reload();
+  closeProfileDropdown();
+  updateProfileBadge();
+  Router._render();
+}
+
+function deleteCurrentProfile() {
+  const active = Profiles.getActive();
+  if (!active) return;
+  if (!confirm('Delete profile "' + active + '"? This cannot be undone.')) return;
+  Profiles.delete(active);
+  Progress.reload();
+  const remaining = Profiles.list();
+  if (remaining.length > 0) {
+    Profiles.setActive(remaining[0]);
+    Progress.reload();
+    updateProfileBadge();
+    Router._render();
+  } else {
+    updateProfileBadge();
+    openProfileModal(true);
+  }
+  closeProfileDropdown();
+}
+
+function toggleProfileDropdown() {
+  const dd = document.getElementById('profile-dropdown');
+  if (dd.classList.contains('open')) {
+    closeProfileDropdown();
+  } else {
+    openProfileDropdown();
+  }
+}
+
+function openProfileDropdown() {
+  renderProfileDropdown();
+  document.getElementById('profile-dropdown').classList.add('open');
+  setTimeout(() => {
+    document.addEventListener('click', _outsideDropdownClose, { once: true });
+  }, 0);
+}
+
+function closeProfileDropdown() {
+  document.getElementById('profile-dropdown').classList.remove('open');
+}
+
+function _outsideDropdownClose(e) {
+  const widget = document.getElementById('profile-widget');
+  if (!widget.contains(e.target)) closeProfileDropdown();
+}
+
+function renderProfileDropdown() {
+  const profiles = Profiles.list();
+  const active = Profiles.getActive();
+  const items = profiles.map(name => {
+    const isActive = name === active;
+    return `<div class="dropdown-profile-item${isActive ? ' active-profile' : ''}"
+                 onclick="switchProfile('${esc(name)}')">${esc(name)}${isActive ? ' \u2713' : ''}</div>`;
+  }).join('');
+  document.getElementById('profile-dropdown').innerHTML = `
+    ${items}
+    <div class="dropdown-divider"></div>
+    <div class="dropdown-action" onclick="openProfileModal(false)">+ New profile</div>
+    <div class="dropdown-action danger" onclick="deleteCurrentProfile()">Delete current</div>
+  `;
+}
+
+function updateProfileBadge() {
+  const active = Profiles.getActive();
+  const badge = document.getElementById('profile-badge');
+  if (!active) {
+    badge.textContent = '?';
+    badge.setAttribute('title', 'No profile selected');
+  } else {
+    badge.textContent = active.charAt(0).toUpperCase();
+    badge.setAttribute('title', active);
+  }
+}
+
+function openProfileModal(isFirstRun) {
+  const modal = document.getElementById('profile-modal');
+  const cancelBtn = document.getElementById('profile-modal-cancel');
+  const input = document.getElementById('profile-name-input');
+  const err = document.getElementById('profile-name-error');
+  modal.classList.add('open');
+  input.value = '';
+  err.textContent = '';
+  cancelBtn.style.display = isFirstRun ? 'none' : '';
+  modal.dataset.firstRun = isFirstRun ? '1' : '0';
+  setTimeout(() => input.focus(), 50);
+}
+
+function closeProfileModal() {
+  document.getElementById('profile-modal').classList.remove('open');
+}
+
+function submitProfileModal() {
+  const input = document.getElementById('profile-name-input');
+  const err = document.getElementById('profile-name-error');
+  const name = input.value.trim();
+  if (!name) {
+    err.textContent = 'Please enter a name.';
+    return;
+  }
+  const ok = Profiles.create(name);
+  if (!ok) {
+    err.textContent = 'A profile with this name already exists.';
+    return;
+  }
+  Profiles.setActive(name);
+  Progress.reload();
+  updateProfileBadge();
+  closeProfileModal();
+  Router._render();
 }
 
 // ============================================================
@@ -458,5 +639,17 @@ function toggleDone(resourceId, event) {
 // Boot
 // ============================================================
 document.addEventListener('DOMContentLoaded', () => {
-  Router.init();
+  const profiles = Profiles.list();
+  if (profiles.length === 0) {
+    Router.init();
+    updateProfileBadge();
+    openProfileModal(true);
+  } else {
+    let active = Profiles.getActive();
+    if (!active || !profiles.includes(active)) {
+      Profiles.setActive(profiles[0]);
+    }
+    updateProfileBadge();
+    Router.init();
+  }
 });

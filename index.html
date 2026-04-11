@@ -22,6 +22,11 @@
       AQL Learn
     </div>
     <div class="nav-breadcrumb" id="breadcrumb"></div>
+    <div class="nav-profile" id="profile-widget">
+      <div class="profile-badge" id="profile-badge"
+           onclick="toggleProfileDropdown()" title="Switch profile">?</div>
+      <div class="profile-dropdown" id="profile-dropdown"></div>
+    </div>
   </nav>
 
   <!-- ========== VIEW: HOME ========== -->
@@ -107,6 +112,34 @@
       <!-- Roadmap timeline -->
       <div class="timeline" id="timeline">
         <!-- Populated by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PROFILE MODAL ========== -->
+  <div class="modal-overlay" id="profile-modal">
+    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-header">
+        <div class="modal-icon">👤</div>
+        <h2 id="modal-title">Create your profile</h2>
+        <p>Enter your name to track your progress on this device.</p>
+      </div>
+      <div class="modal-body">
+        <input
+          type="text"
+          id="profile-name-input"
+          class="modal-input"
+          placeholder="Your name (e.g. Ahmed)"
+          maxlength="40"
+          onkeydown="if(event.key==='Enter') submitProfileModal()"
+          autocomplete="off"
+        >
+        <div class="modal-error" id="profile-name-error"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn-cancel" id="profile-modal-cancel"
+                onclick="closeProfileModal()">Cancel</button>
+        <button class="modal-btn-confirm" onclick="submitProfileModal()">Confirm</button>
       </div>
     </div>
   </div>
