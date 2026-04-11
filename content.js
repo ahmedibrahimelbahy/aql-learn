@@ -40,6 +40,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "n8n-1-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "n8n Masterclass: Build AI Agents & Automate Workflows (Beginner to Pro)",
                   url: "https://www.youtube.com/watch?v=ZHH3sr234zY",
@@ -48,6 +49,7 @@ const CONTENT = {
                 },
                 {
                   id: "n8n-1-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Understanding APIs in n8n (as a beginner)",
                   url: "https://www.youtube.com/watch?v=ju9xk_QX990",
@@ -56,6 +58,7 @@ const CONTENT = {
                 },
                 {
                   id: "n8n-1-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "n8n Official Documentation",
                   url: "https://docs.n8n.io",
@@ -70,6 +73,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "n8n-2-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "I Tested Claude's New Managed Agents... What You Need To Know",
                   url: "https://www.youtube.com/watch?v=27Y44JYXZJ8",
@@ -78,6 +82,7 @@ const CONTENT = {
                 },
                 {
                   id: "n8n-2-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "I Built the Ultimate Team of AI Agents in n8n With No Code",
                   url: "https://www.youtube.com/watch?v=9FuNtfsnRNo",
@@ -86,6 +91,7 @@ const CONTENT = {
                 },
                 {
                   id: "n8n-2-3",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "I Built an AI Agent that Automated my Inbox with n8n (No Code)",
                   url: "https://www.youtube.com/watch?v=JUx2ZfNfD64",
@@ -94,6 +100,7 @@ const CONTENT = {
                 },
                 {
                   id: "n8n-2-4",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "n8n Community Templates Library",
                   url: "https://n8n.io/workflows",
@@ -108,6 +115,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "n8n-3-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "I Built a Personal Assistant AI Agent with No Code in n8n",
                   url: "https://www.youtube.com/watch?v=omw1MEvMCo0",
@@ -116,14 +124,16 @@ const CONTENT = {
                 },
                 {
                   id: "n8n-3-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: n8n lead generation or sales workflow project",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a Nick Saraev or Nate Herk video on building a lead gen or sales automation project in n8n."
+                  title: "N8N Complete Guide (AI Agents + Workflow Automation)",
+                  url: "https://www.youtube.com/watch?v=r6uX3btBgvw",
+                  duration: "3 hrs",
+                  description: "Nick Saraev's complete n8n guide — covers AI agents, workflows, and real-world automation projects from scratch."
                 },
                 {
                   id: "n8n-3-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "n8n Self-Hosting Guide",
                   url: "https://docs.n8n.io/hosting/",
@@ -147,6 +157,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "agent-1-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Everything I Learned About AI Agents in 2024 in 19 Minutes",
                   url: "https://www.youtube.com/watch?v=pYelCIqkm5Y",
@@ -155,6 +166,7 @@ const CONTENT = {
                 },
                 {
                   id: "agent-1-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "How to Build & Sell AI Agents in 2026: Ultimate Beginner's Guide",
                   url: "https://www.youtube.com/watch?v=AYQtRqW1xX4",
@@ -163,6 +175,7 @@ const CONTENT = {
                 },
                 {
                   id: "agent-1-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "LangChain Agents — Official Docs",
                   url: "https://python.langchain.com/docs/modules/agents/",
@@ -177,6 +190,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "agent-2-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "How to Build & Sell AI Agents: Ultimate Beginner's Guide",
                   url: "https://www.youtube.com/watch?v=w0H1-b044KY",
@@ -185,14 +199,16 @@ const CONTENT = {
                 },
                 {
                   id: "agent-2-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI lead generation agent build",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on building an AI agent that finds prospects and drafts personalized outreach automatically."
+                  title: "[Apollo.io] B2B Lead Generation Tutorial For Beginners",
+                  url: "https://www.youtube.com/watch?v=nXc13tFrMUY",
+                  duration: "25 min",
+                  description: "Ravi Abuvala walks through the full Apollo.io workflow — find prospects, filter by ICP, and launch automated outreach sequences."
                 },
                 {
                   id: "agent-2-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Clay — AI-Powered Lead Enrichment",
                   url: "https://www.clay.com",
@@ -207,6 +223,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "agent-3-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "How To Use AI Agents To Do ALL Your Work — Full CrewAI Course for Beginners",
                   url: "https://www.youtube.com/watch?v=ONKOXwucLvE",
@@ -215,14 +232,16 @@ const CONTENT = {
                 },
                 {
                   id: "agent-3-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI customer support chatbot build",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on training an AI chatbot on your business data to handle support tickets automatically."
+                  title: "How to Build AI ChatBot with Custom Knowledge Base in 10 mins",
+                  url: "https://www.youtube.com/watch?v=6hQF80_xMkQ",
+                  duration: "10 min",
+                  description: "Build an AI chatbot trained on your own data — documents, PDFs, or website — and embed it anywhere in minutes."
                 },
                 {
                   id: "agent-3-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Voiceflow — Build No-Code AI Chatbots",
                   url: "https://www.voiceflow.com",
@@ -237,6 +256,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "agent-4-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: AI web research agent",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -245,6 +265,7 @@ const CONTENT = {
                 },
                 {
                   id: "agent-4-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: AI data extraction workflow",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -253,6 +274,7 @@ const CONTENT = {
                 },
                 {
                   id: "agent-4-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Perplexity API — Real-Time Research for Agents",
                   url: "https://docs.perplexity.ai",
@@ -267,6 +289,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "agent-5-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: AI social media content agent",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -275,14 +298,16 @@ const CONTENT = {
                 },
                 {
                   id: "agent-5-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Auto-repurpose content across platforms",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on turning one piece of content into posts for Instagram, LinkedIn, X, and TikTok automatically."
+                  title: "THIS AI Automation Lets You Repurpose Youtube Videos Into Social Media Posts!",
+                  url: "https://www.youtube.com/watch?v=KBGYMGWyL04",
+                  duration: "20 min",
+                  description: "Build a no-code automation that takes a YouTube video and generates ready-to-post content for every social platform automatically."
                 },
                 {
                   id: "agent-5-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Buffer API — Programmatic Social Scheduling",
                   url: "https://buffer.com/developers/api",
@@ -297,6 +322,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "agent-6-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: AI meeting summarizer agent",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -305,14 +331,16 @@ const CONTENT = {
                 },
                 {
                   id: "agent-6-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Internal knowledge base agent",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on building an agent that answers team questions from your company's internal documents."
+                  title: "The Best RAG System On YouTube (Steal This!)",
+                  url: "https://www.youtube.com/watch?v=Kvf-Pr1LRe4",
+                  duration: "35 min",
+                  description: "Nate Herk builds the most powerful RAG system — connect it to your company docs and let AI answer questions from your knowledge base."
                 },
                 {
                   id: "agent-6-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Notion AI Integration Guide",
                   url: "https://www.notion.so/help/guides/notion-ai-faq",
@@ -349,22 +377,25 @@ const CONTENT = {
               resources: [
                 {
                   id: "mkt-1-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: ChatGPT for marketing beginners",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a beginner guide on using ChatGPT or Claude to write marketing copy, emails, and social media posts."
+                  title: "Beginner to Pro with ChatGPT in One Video!",
+                  url: "https://www.youtube.com/watch?v=bkf3XBOj2PE",
+                  duration: "30 min",
+                  description: "Jeff Su's complete ChatGPT guide — cover prompting frameworks, marketing copy, emails, and productivity workflows all in one shot."
                 },
                 {
                   id: "mkt-1-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Best AI marketing tools overview",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find an overview of the top AI marketing tools — Jasper, Copy.ai, and others."
+                  title: "13 AI Tools I Use to Make $480,000/Month",
+                  url: "https://www.youtube.com/watch?v=-XbfmhGk4r0",
+                  duration: "25 min",
+                  description: "Liam Ottley runs through his full AI marketing and business stack — the real tools that drive revenue in an AI agency."
                 },
                 {
                   id: "mkt-1-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "The Complete Guide to AI in Marketing",
                   url: "https://blog.hubspot.com/marketing/ai-marketing",
@@ -372,11 +403,12 @@ const CONTENT = {
                 },
                 {
                   id: "mkt-1-4",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI copywriting for ads and landing pages",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a practical walkthrough of AI-assisted copywriting for ads, landing pages, and emails."
+                  title: "Copy This Perfect Landing Page To Double Your Leads Instantly",
+                  url: "https://www.youtube.com/watch?v=V2_LNtV95jM",
+                  duration: "18 min",
+                  description: "Wes McDowell breaks down the exact landing page structure that converts — use AI to write each section in minutes."
                 }
               ]
             },
@@ -387,6 +419,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "mkt-2-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Generate a month of content with AI",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -395,6 +428,7 @@ const CONTENT = {
                 },
                 {
                   id: "mkt-2-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: AI SEO content strategy",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -403,6 +437,7 @@ const CONTENT = {
                 },
                 {
                   id: "mkt-2-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Best AI Marketing Automation Platforms 2024",
                   url: "https://zapier.com/blog/ai-marketing-automation/",
@@ -417,14 +452,16 @@ const CONTENT = {
               resources: [
                 {
                   id: "mkt-3-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI-powered ad campaigns",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on using AI to create, optimize, and scale advertising campaigns."
+                  title: "The BEST Facebook Ads Campaign Structure",
+                  url: "https://www.youtube.com/watch?v=cqNsMJPoM7c",
+                  duration: "20 min",
+                  description: "Ben Heath's proven Facebook/Meta ads structure — test creatives, structure campaigns, and scale what works."
                 },
                 {
                   id: "mkt-3-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Google Analytics + AI insights",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -433,6 +470,7 @@ const CONTENT = {
                 },
                 {
                   id: "mkt-3-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "How to Use AI for A/B Testing at Scale",
                   url: "https://www.optimizely.com/optimization-glossary/ab-testing/",
@@ -456,6 +494,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "img-1-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Midjourney AI Tutorial: How to Use Midjourney to Create Stunning Art",
                   url: "https://www.youtube.com/watch?v=9WVZbitXbck",
@@ -464,14 +503,16 @@ const CONTENT = {
                 },
                 {
                   id: "img-1-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI image prompt engineering deep dive",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on the principles behind writing prompts that consistently generate great images."
+                  title: "How to Write Great Prompts for AI Image Generators",
+                  url: "https://www.youtube.com/watch?v=6RAStep_3OI",
+                  duration: "20 min",
+                  description: "Learn the universal prompt principles that work across Midjourney, Stable Diffusion, DALL-E 3, and any image AI — style, composition, lighting, and more."
                 },
                 {
                   id: "img-1-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Midjourney Official Prompt Guide",
                   url: "https://docs.midjourney.com/docs/prompts",
@@ -486,6 +527,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "img-2-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: DALL-E 3 complete tutorial",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -494,14 +536,16 @@ const CONTENT = {
                 },
                 {
                   id: "img-2-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Stable Diffusion beginner guide",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a guide on setting up and using Stable Diffusion locally for unlimited free image generation."
+                  title: "How to Install & Use Stable Diffusion on Windows",
+                  url: "https://www.youtube.com/watch?v=onmqbI5XPH8",
+                  duration: "25 min",
+                  description: "Kevin Stratvert's step-by-step guide — install Stable Diffusion locally, load models, and start generating unlimited images for free."
                 },
                 {
                   id: "img-2-3",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Flux 1.1 UPDATE: Create CONSISTENT AI Influencers With BEST Image Generator",
                   url: "https://www.youtube.com/watch?v=CGPCjazydK0",
@@ -510,6 +554,7 @@ const CONTENT = {
                 },
                 {
                   id: "img-2-4",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Midjourney vs DALL-E vs Stable Diffusion: Full Comparison",
                   url: "https://www.tomsguide.com/ai/ai-image-generation/midjourney-vs-dall-e-3-vs-stable-diffusion",
@@ -524,14 +569,16 @@ const CONTENT = {
               resources: [
                 {
                   id: "img-3-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: ComfyUI advanced image workflows",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on building complex image generation pipelines using ComfyUI's node system."
+                  title: "ComfyUI Starter Guide: How and Why to Use It",
+                  url: "https://www.youtube.com/watch?v=5dBAIhx28ow",
+                  duration: "22 min",
+                  description: "Olivio Sarikas introduces ComfyUI's node-based workflow system — unlock full control over image generation pipelines and advanced techniques."
                 },
                 {
                   id: "img-3-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Batch image generation for teams",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -540,6 +587,7 @@ const CONTENT = {
                 },
                 {
                   id: "img-3-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "AI Image Generation for Commercial Use: Legal Guide",
                   url: "https://creativecommons.org/2023/08/18/cc-and-generative-ai/",
@@ -563,14 +611,16 @@ const CONTENT = {
               resources: [
                 {
                   id: "vid-1-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI video generation overview 2024",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find an overview of all major AI video tools and what each one is best at."
+                  title: "The Best AI Video Generators of 2025!",
+                  url: "https://www.youtube.com/watch?v=qblrpjsJb3I",
+                  duration: "25 min",
+                  description: "Curious Refuge tests and ranks every major AI video tool — Runway, Kling, Pika, Luma, and more — so you know exactly where to start."
                 },
                 {
                   id: "vid-1-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Runway AI — Tutorial for Beginners [FULL GUIDE]",
                   url: "https://www.youtube.com/watch?v=c38vtLw1nSk",
@@ -579,6 +629,7 @@ const CONTENT = {
                 },
                 {
                   id: "vid-1-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Best AI Video Generators: 2024 Comparison",
                   url: "https://www.tomsguide.com/ai/ai-video-generators",
@@ -593,6 +644,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "vid-2-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Create Cinematic AI Videos with Runway Gen-3",
                   url: "https://www.youtube.com/watch?v=gyCg0yv3Njw",
@@ -601,6 +653,7 @@ const CONTENT = {
                 },
                 {
                   id: "vid-2-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Generate Video from ANY Photo! │KLING AI Tutorial",
                   url: "https://www.youtube.com/watch?v=_CyBXbuDth0",
@@ -609,6 +662,7 @@ const CONTENT = {
                 },
                 {
                   id: "vid-2-3",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Pika AI video tutorial",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -617,6 +671,7 @@ const CONTENT = {
                 },
                 {
                   id: "vid-2-4",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Midjourney + Runway Gen 3 Turbo Full Course — Create Lifelike Cinematic AI Videos",
                   url: "https://www.youtube.com/watch?v=qQVDTX4qDbM",
@@ -632,6 +687,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "vid-3-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Full AI video production pipeline",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -640,6 +696,7 @@ const CONTENT = {
                 },
                 {
                   id: "vid-3-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: AI video for social media (Reels, TikTok, Shorts)",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -648,6 +705,7 @@ const CONTENT = {
                 },
                 {
                   id: "vid-3-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "AI Video Copyright & Platform Policies Guide",
                   url: "https://creativecommons.org/2023/08/18/cc-and-generative-ai/",
@@ -684,6 +742,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "web-1-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Cursor Tutorial for Beginners (AI Code Editor)",
                   url: "https://www.youtube.com/watch?v=ocMOZpuAMw4",
@@ -692,6 +751,7 @@ const CONTENT = {
                 },
                 {
                   id: "web-1-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "Claude Code + Karpathy's Obsidian = New Meta",
                   url: "https://www.youtube.com/watch?v=eglVxLaWRUU",
@@ -700,6 +760,7 @@ const CONTENT = {
                 },
                 {
                   id: "web-1-3",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "How To Build Web Apps using V0 + Claude AI + Cursor AI",
                   url: "https://www.youtube.com/watch?v=grc0YSEdUQY",
@@ -708,6 +769,7 @@ const CONTENT = {
                 },
                 {
                   id: "web-1-4",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "MDN: Getting Started with the Web",
                   url: "https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web",
@@ -722,6 +784,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "web-2-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "CLAUDE CODE FULL COURSE 4 HOURS: Build & Sell (2026)",
                   url: "https://www.youtube.com/watch?v=QoQBzR1NIqI",
@@ -730,14 +793,16 @@ const CONTENT = {
                 },
                 {
                   id: "web-2-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Supabase + AI build a SaaS",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on using Supabase for backend and AI for the frontend logic and UI generation."
+                  title: "How to Use AI to Build Your SaaS Startup (Lovable, Supabase)",
+                  url: "https://www.youtube.com/watch?v=mJwPvyc4-rk",
+                  duration: "35 min",
+                  description: "Greg Isenberg walks through building a complete SaaS product using Lovable for the frontend and Supabase for the backend — zero manual coding."
                 },
                 {
                   id: "web-2-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Bolt.new — AI Full-Stack Dev in the Browser",
                   url: "https://bolt.new",
@@ -752,6 +817,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "web-3-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Deploy to Vercel tutorial",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -760,6 +826,7 @@ const CONTENT = {
                 },
                 {
                   id: "web-3-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Web performance optimization with AI",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -768,6 +835,7 @@ const CONTENT = {
                 },
                 {
                   id: "web-3-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Vercel Documentation",
                   url: "https://vercel.com/docs",
@@ -791,6 +859,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "app-1-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Bubble.io full tutorial",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -799,6 +868,7 @@ const CONTENT = {
                 },
                 {
                   id: "app-1-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: FlutterFlow no-code mobile app",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -807,6 +877,7 @@ const CONTENT = {
                 },
                 {
                   id: "app-1-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Best No-Code App Builders in 2024",
                   url: "https://www.nocode.tech/tools/app-builder",
@@ -821,6 +892,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "app-2-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "كورس تعلم كلود من الصفر || Claude 101 in Arabic",
                   url: "https://www.youtube.com/watch?v=oz44Wp22iCU",
@@ -829,6 +901,7 @@ const CONTENT = {
                 },
                 {
                   id: "app-2-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "EVERYTHING You Need to Know About Claude in 2024",
                   url: "https://www.youtube.com/watch?v=XKX1C65W1EE",
@@ -837,6 +910,7 @@ const CONTENT = {
                 },
                 {
                   id: "app-2-3",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Build an app with Claude API",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -845,6 +919,7 @@ const CONTENT = {
                 },
                 {
                   id: "app-2-4",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Anthropic API Documentation",
                   url: "https://docs.anthropic.com",
@@ -859,6 +934,7 @@ const CONTENT = {
               resources: [
                 {
                   id: "app-3-1",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Submit app to App Store",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -867,6 +943,7 @@ const CONTENT = {
                 },
                 {
                   id: "app-3-2",
+                  dateAdded: "2025-01-01",
                   type: "youtube",
                   title: "ADD_VIDEO_HERE: Monetize your AI app",
                   url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
@@ -875,6 +952,7 @@ const CONTENT = {
                 },
                 {
                   id: "app-3-3",
+                  dateAdded: "2025-01-01",
                   type: "article",
                   title: "Stripe Payments Integration Guide",
                   url: "https://stripe.com/docs/payments/quickstart",
@@ -884,6 +962,272 @@ const CONTENT = {
             }
           ]
         }
+      ]
+    },
+
+    // =========================================================
+    // PILLAR 4 — BY CREATOR
+    // =========================================================
+    {
+      id: "by-channel",
+      name: "By Creator",
+      icon: "📺",
+      description: "Follow the top AI educators on YouTube — curated playlists organized by creator so you can stay current as AI moves fast.",
+      color: "#f59e0b",
+      subtracks: [
+
+        // ── Nate Herk ─────────────────────────────────────────
+        {
+          id: "nate-herk-channel",
+          name: "Nate Herk",
+          icon: "⚡",
+          description: "AI automation expert helping non-technical people build AI agents and n8n workflows. Posts 3–5× per week on the latest Claude, n8n, and automation tools.",
+          estimatedTime: "Self-paced",
+          phases: [
+            {
+              id: "nate-latest",
+              name: "Latest Drops",
+              timeline: "April 2026",
+              resources: [
+                {
+                  id: "nh-1",
+                  dateAdded: "2026-04-11",
+                  type: "youtube",
+                  title: "Seedance 2.0 + Claude Code Creates $10k Websites in Minutes",
+                  url: "https://www.youtube.com/watch?v=NvxiSG34mPU",
+                  duration: "~15 min",
+                  description: "Nate combines Seedance 2.0 with Claude Code to build premium websites at record speed."
+                },
+                {
+                  id: "nh-2",
+                  dateAdded: "2026-04-09",
+                  type: "youtube",
+                  title: "Claude Just Told Us to Stop Using Their Best Model",
+                  url: "https://www.youtube.com/watch?v=1EPsUXSManU",
+                  duration: "~15 min",
+                  description: "Anthropic's surprising recommendation on which Claude model to actually use — and why it matters for your workflows."
+                },
+                {
+                  id: "nh-3",
+                  dateAdded: "2026-04-09",
+                  type: "youtube",
+                  title: "I Gave OpenClaw $10,000 to Trade Stocks",
+                  url: "https://www.youtube.com/watch?v=eu8UJtuIi-E",
+                  duration: "~20 min",
+                  description: "Nate puts real money on the line to test OpenClaw's autonomous trading capabilities."
+                },
+                {
+                  id: "nh-4",
+                  dateAdded: "2026-04-08",
+                  type: "youtube",
+                  title: "I Tested Claude's New Managed Agents... What You Need To Know",
+                  url: "https://www.youtube.com/watch?v=27Y44JYXZJ8",
+                  duration: "18 min",
+                  description: "What Claude's managed agents actually do inside n8n — the honest breakdown of what works and what doesn't."
+                },
+                {
+                  id: "nh-5",
+                  dateAdded: "2026-04-07",
+                  type: "youtube",
+                  title: "Claude's New AI Just Changed the Internet Forever",
+                  url: "https://www.youtube.com/watch?v=DG1wRgEpdO4",
+                  duration: "~15 min",
+                  description: "Nate breaks down the latest Claude release and what it means for automators and builders."
+                },
+                {
+                  id: "nh-6",
+                  dateAdded: "2026-04-06",
+                  type: "youtube",
+                  title: "Andrej Karpathy Just 10x'd Everyone's Claude Code",
+                  url: "https://www.youtube.com/watch?v=p9mgmKhUz_4",
+                  duration: "~20 min",
+                  description: "How Karpathy's Obsidian memory system dramatically improves Claude Code outputs — Nate's full breakdown."
+                },
+                {
+                  id: "nh-7",
+                  dateAdded: "2026-04-06",
+                  type: "youtube",
+                  title: "Planning In Claude Code Just Got a Huge Upgrade",
+                  url: "https://www.youtube.com/watch?v=T4fXb3sbJIo",
+                  duration: "~12 min",
+                  description: "The new planning workflow in Claude Code that saves hours and avoids wasted tokens."
+                },
+                {
+                  id: "nh-8",
+                  dateAdded: "2026-04-04",
+                  type: "youtube",
+                  title: "How to Use Claude Code for 99% CHEAPER",
+                  url: "https://www.youtube.com/watch?v=F3nYY3N2wgw",
+                  duration: "~18 min",
+                  description: "Smart token management tricks that cut your Claude Code costs dramatically without sacrificing quality."
+                }
+              ]
+            }
+          ]
+        },
+
+        // ── Jack Roberts ──────────────────────────────────────
+        {
+          id: "jack-roberts-channel",
+          name: "Jack Roberts",
+          icon: "🧠",
+          description: "Top-100 UK entrepreneur who built a 7-figure AI automation business. Teaches Claude Code, Cowork, and real systems that run actual businesses — posts daily.",
+          estimatedTime: "Self-paced",
+          phases: [
+            {
+              id: "jack-latest",
+              name: "Latest Drops",
+              timeline: "April 2026",
+              resources: [
+                {
+                  id: "jr-1",
+                  dateAdded: "2026-04-10",
+                  type: "youtube",
+                  title: "Claude Code + Karpathy's Obsidian = New Meta",
+                  url: "https://www.youtube.com/watch?v=eglVxLaWRUU",
+                  duration: "23 min",
+                  description: "Jack shows how combining Claude Code with Karpathy's Obsidian creates the most powerful AI coding setup available right now."
+                },
+                {
+                  id: "jr-2",
+                  dateAdded: "2026-04-09",
+                  type: "youtube",
+                  title: "Claude Code just dropped Managed Agents... It Destroys No Code",
+                  url: "https://www.youtube.com/watch?v=eQ_RxS_fh64",
+                  duration: "~20 min",
+                  description: "Why Claude Code's managed agents change everything — and what it means for the future of no-code tools."
+                },
+                {
+                  id: "jr-3",
+                  dateAdded: "2026-04-09",
+                  type: "youtube",
+                  title: "Claude Code + Pinecone 2.0 = UNSTOPPABLE Memory",
+                  url: "https://www.youtube.com/watch?v=TXcr0x9SIXA",
+                  duration: "~18 min",
+                  description: "Add persistent long-term memory to Claude Code using Pinecone's vector database — full walkthrough."
+                },
+                {
+                  id: "jr-4",
+                  dateAdded: "2026-04-07",
+                  type: "youtube",
+                  title: "Gemma 4 + Ollama = FREE Claude Code",
+                  url: "https://www.youtube.com/watch?v=eehsSUlXZN4",
+                  duration: "~15 min",
+                  description: "Run Claude Code-level workflows completely free and locally using Gemma 4 and Ollama."
+                },
+                {
+                  id: "jr-5",
+                  dateAdded: "2026-04-06",
+                  type: "youtube",
+                  title: "7 Claude Cowork Skills I Use Every Day (steal them)",
+                  url: "https://www.youtube.com/watch?v=Vachtj-xjXI",
+                  duration: "~20 min",
+                  description: "Jack's daily Claude Cowork skills that run his 7-figure business — battle-tested and ready to copy."
+                },
+                {
+                  id: "jr-6",
+                  dateAdded: "2026-04-03",
+                  type: "youtube",
+                  title: "5 INSANE Claude Cowork Use Cases... steal them",
+                  url: "https://www.youtube.com/watch?v=isjOj4QSaO8",
+                  duration: "~18 min",
+                  description: "Five wild real-world Claude Cowork use cases that most people aren't doing yet."
+                },
+                {
+                  id: "jr-7",
+                  dateAdded: "2026-04-01",
+                  type: "youtube",
+                  title: "Claude Code + NoteBookLM = Infinite Memory",
+                  url: "https://www.youtube.com/watch?v=6t32nPxeJb8",
+                  duration: "~16 min",
+                  description: "Combine Claude Code with Google's NotebookLM to give your AI an unlimited, searchable knowledge base."
+                }
+              ]
+            }
+          ]
+        },
+
+        // ── Liam Ottley ───────────────────────────────────────
+        {
+          id: "liam-ottley-channel",
+          name: "Liam Ottley",
+          icon: "🚀",
+          description: "NZ entrepreneur who invented the AI Automation Agency model. Teaches how to build, sell, and scale AI agent businesses — 290,000+ community members.",
+          estimatedTime: "Self-paced",
+          phases: [
+            {
+              id: "liam-latest",
+              name: "Latest Drops",
+              timeline: "Feb–Mar 2026",
+              resources: [
+                {
+                  id: "lo-1",
+                  dateAdded: "2026-03-22",
+                  type: "youtube",
+                  title: "How to Build & Sell AI Agents in 2026: Ultimate Beginner's Guide",
+                  url: "https://www.youtube.com/watch?v=AYQtRqW1xX4",
+                  duration: "3 hrs 5 min",
+                  description: "Liam's flagship 2026 guide — understand AI agents, build your first one, and learn how to turn it into a real business."
+                },
+                {
+                  id: "lo-2",
+                  dateAdded: "2026-03-18",
+                  type: "youtube",
+                  title: "I Set Up a Claude Code Operating System for 6 Founders in 8 Hours",
+                  url: "https://www.youtube.com/watch?v=OCs0WJ5VoOc",
+                  duration: "~35 min",
+                  description: "Liam installs his Claude Code OS for six business founders — watch the full implementation in real time."
+                },
+                {
+                  id: "lo-3",
+                  dateAdded: "2026-03-08",
+                  type: "youtube",
+                  title: "What Is an AI Operating System? (And Why Every Business Will Need One)",
+                  url: "https://www.youtube.com/watch?v=DXcVT07bQ6g",
+                  duration: "~25 min",
+                  description: "The concept of an AI OS for your business explained — why it's the next major shift in how companies run."
+                },
+                {
+                  id: "lo-4",
+                  dateAdded: "2026-03-05",
+                  type: "youtube",
+                  title: "The Biggest Shift in Business Since the Internet Just Happened",
+                  url: "https://www.youtube.com/watch?v=oC1h922cDoY",
+                  duration: "~20 min",
+                  description: "Liam's analysis of the current AI moment and what it means for entrepreneurs and business owners right now."
+                },
+                {
+                  id: "lo-5",
+                  dateAdded: "2026-03-02",
+                  type: "youtube",
+                  title: "Your Phone Can Now Run Your Entire Business. Here's How It Runs Mine.",
+                  url: "https://www.youtube.com/watch?v=_He58Zi8NQg",
+                  duration: "~30 min",
+                  description: "How Liam runs his entire 7-figure business from his phone using AI automation and Claude Code."
+                },
+                {
+                  id: "lo-6",
+                  dateAdded: "2026-02-23",
+                  type: "youtube",
+                  title: "My Plan to Automate 70% of my Business w/ Claude Code (in 30 Days)",
+                  url: "https://www.youtube.com/watch?v=O_VBdNrX0PM",
+                  duration: "~30 min",
+                  description: "Liam's 30-day roadmap for automating the majority of his business operations using Claude Code."
+                },
+                {
+                  id: "lo-7",
+                  dateAdded: "2026-02-12",
+                  type: "youtube",
+                  title: "How to Automate Your Life & Work w/ Claude Code: Ultimate Beginner's Guide",
+                  url: "https://www.youtube.com/watch?v=2bsfQThGXxc",
+                  duration: "~60 min",
+                  description: "Complete beginner's guide to using Claude Code for life and business automation — start here if you're new."
+                }
+              ]
+            }
+          ]
+        }
+
       ]
     }
 
