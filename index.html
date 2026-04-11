@@ -134,12 +134,51 @@
           onkeydown="if(event.key==='Enter') submitProfileModal()"
           autocomplete="off"
         >
+        <input
+          type="tel"
+          id="profile-pin-input"
+          class="modal-input"
+          placeholder="Optional 4-digit PIN"
+          maxlength="4"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          onkeydown="if(event.key==='Enter') submitProfileModal()"
+          autocomplete="off"
+          style="margin-top: 0.75rem;"
+        >
         <div class="modal-error" id="profile-name-error"></div>
       </div>
       <div class="modal-footer">
         <button class="modal-btn-cancel" id="profile-modal-cancel"
                 onclick="closeProfileModal()">Cancel</button>
         <button class="modal-btn-confirm" onclick="submitProfileModal()">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== PIN MODAL ========== -->
+  <div class="modal-overlay" id="pin-modal">
+    <div class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-header">
+        <div class="modal-icon">🔒</div>
+        <h2 id="pin-modal-label">Enter PIN</h2>
+      </div>
+      <div class="modal-body">
+        <div class="pin-boxes">
+          <input type="tel" class="pin-box" id="pin-d0" maxlength="1" inputmode="numeric"
+                 oninput="_pinHandleInput(this,0)" onkeydown="_pinHandleKey(this,0,event)">
+          <input type="tel" class="pin-box" id="pin-d1" maxlength="1" inputmode="numeric"
+                 oninput="_pinHandleInput(this,1)" onkeydown="_pinHandleKey(this,1,event)">
+          <input type="tel" class="pin-box" id="pin-d2" maxlength="1" inputmode="numeric"
+                 oninput="_pinHandleInput(this,2)" onkeydown="_pinHandleKey(this,2,event)">
+          <input type="tel" class="pin-box" id="pin-d3" maxlength="1" inputmode="numeric"
+                 oninput="_pinHandleInput(this,3)" onkeydown="_pinHandleKey(this,3,event)">
+        </div>
+        <div class="modal-error" id="pin-modal-error"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-btn-cancel" onclick="closePinModal()">Cancel</button>
+        <button class="modal-btn-confirm" onclick="submitPinModal()">Unlock</button>
       </div>
     </div>
   </div>

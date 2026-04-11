@@ -672,6 +672,24 @@ nav {
   display: flex;
 }
 
+/* New Content Badge */
+.badge-new {
+  position: absolute;
+  top: 0.6rem;
+  left: 0.6rem;
+  background: linear-gradient(135deg, #7c3aed, #3b82f6);
+  color: #fff;
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.18rem 0.55rem;
+  border-radius: 100px;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(124, 58, 237, 0.45);
+  pointer-events: none;
+}
+
 /* Resource Body */
 .resource-body {
   padding: 1rem;
@@ -1155,8 +1173,48 @@ nav {
   box-shadow: 0 4px 16px var(--accent-glow);
 }
 
+/* ---------- PIN Digit Boxes ---------- */
+.pin-boxes {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+.pin-box {
+  width: 56px;
+  height: 64px;
+  background: var(--surface-2);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  -moz-appearance: textfield;
+}
+
+.pin-box::-webkit-outer-spin-button,
+.pin-box::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.pin-box:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-glow);
+}
+
 @media (max-width: 480px) {
   .modal-box {
     padding: 1.75rem 1.25rem;
+  }
+
+  .pin-box {
+    width: 48px;
+    height: 56px;
+    font-size: 1.25rem;
   }
 }

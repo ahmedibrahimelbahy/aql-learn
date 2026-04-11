@@ -50,10 +50,28 @@ const Profiles = {
     const remaining = this.list().filter(n => n.toLowerCase() !== lower);
     localStorage.setItem(this._LIST_KEY, JSON.stringify(remaining));
     localStorage.removeItem('aql-learn-progress-v2:' + actual);
+    localStorage.removeItem('aql-learn-pin:' + actual);
     if ((this.getActive() || '').toLowerCase() === lower) {
       localStorage.removeItem(this._ACTIVE_KEY);
     }
     return true;
+  },
+
+  setPin(name, pin) {
+    const actual = this.list().find(n => n.toLowerCase() === name.toLowerCase());
+    if (!actual || !pin) return;
+    localStorage.setItem('aql-learn-pin:' + actual, hashPin(pin));
+  },
+
+  getPin(name) {
+    const actual = this.list().find(n => n.toLowerCase() === name.toLowerCase());
+    return actual ? localStorage.getItem('aql-learn-pin:' + actual) : null;
+  },
+
+  checkPin(name, pin) {
+    const stored = this.getPin(name);
+    if (!stored) return true; // no PIN — always allow
+    return stored === hashPin(pin);
   }
 };
 
@@ -131,6 +149,17 @@ const Progress = {
 // ============================================================
 // Helpers
 // ============================================================
+
+// Simple djb2 hash — not cryptographic, but avoids plaintext PINs in DevTools
+function hashPin(pin) {
+  let h = 5381;
+  for (let i = 0; i < pin.length; i++) {
+    h = ((h << 5) + h) + pin.charCodeAt(i);
+    h = h & h;
+  }
+  return String(h >>> 0);
+}
+
 function findTrack(trackId) {
   for (const pillar of CONTENT.pillars) {
     const track = pillar.subtracks.find(s => s.id === trackId);
@@ -179,9 +208,72 @@ function getTotalStats() {
 // Profile UI
 // ============================================================
 function switchProfile(name) {
+  if (Profiles.getPin(name)) {
+    closeProfileDropdown();
+    openPinModal(name);
+  } else {
+    Profiles.setActive(name);
+    Progress.reload();
+    closeProfileDropdown();
+    updateProfileBadge();
+    Router._render();
+  }
+}
+
+function openPinModal(name) {
+  const modal = document.getElementById('pin-modal');
+  document.getElementById('pin-modal-label').textContent = 'Enter PIN for ' + name;
+  document.getElementById('pin-modal-error').textContent = '';
+  modal.dataset.target = name;
+  ['pin-d0', 'pin-d1', 'pin-d2', 'pin-d3'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  modal.classList.add('open');
+  setTimeout(() => document.getElementById('pin-d0').focus(), 50);
+}
+
+function closePinModal() {
+  document.getElementById('pin-modal').classList.remove('open');
+}
+
+function _pinHandleInput(el, idx) {
+  el.value = el.value.replace(/[^0-9]/g, '').slice(0, 1);
+  if (el.value && idx < 3) {
+    document.getElementById('pin-d' + (idx + 1)).focus();
+  }
+  if (idx === 3 && el.value) {
+    submitPinModal();
+  }
+}
+
+function _pinHandleKey(el, idx, e) {
+  if (e.key === 'Backspace' && !el.value && idx > 0) {
+    document.getElementById('pin-d' + (idx - 1)).focus();
+  }
+  if (e.key === 'Enter') submitPinModal();
+}
+
+function submitPinModal() {
+  const modal = document.getElementById('pin-modal');
+  const name = modal.dataset.target;
+  const pin = ['pin-d0', 'pin-d1', 'pin-d2', 'pin-d3']
+    .map(id => document.getElementById(id).value)
+    .join('');
+  if (pin.length < 4) {
+    document.getElementById('pin-modal-error').textContent = 'Enter all 4 digits.';
+    return;
+  }
+  if (!Profiles.checkPin(name, pin)) {
+    document.getElementById('pin-modal-error').textContent = 'Incorrect PIN.';
+    ['pin-d0', 'pin-d1', 'pin-d2', 'pin-d3'].forEach(id => {
+      document.getElementById(id).value = '';
+    });
+    document.getElementById('pin-d0').focus();
+    return;
+  }
+  closePinModal();
   Profiles.setActive(name);
   Progress.reload();
-  closeProfileDropdown();
   updateProfileBadge();
   Router._render();
 }
@@ -266,6 +358,7 @@ function openProfileModal(isFirstRun) {
   const err = document.getElementById('profile-name-error');
   modal.classList.add('open');
   input.value = '';
+  document.getElementById('profile-pin-input').value = '';
   err.textContent = '';
   cancelBtn.style.display = isFirstRun ? 'none' : '';
   modal.dataset.firstRun = isFirstRun ? '1' : '0';
@@ -278,10 +371,16 @@ function closeProfileModal() {
 
 function submitProfileModal() {
   const input = document.getElementById('profile-name-input');
+  const pinInput = document.getElementById('profile-pin-input');
   const err = document.getElementById('profile-name-error');
   const name = input.value.trim();
   if (!name) {
     err.textContent = 'Please enter a name.';
+    return;
+  }
+  const pinVal = pinInput.value.trim();
+  if (pinVal && !/^\d{4}$/.test(pinVal)) {
+    err.textContent = 'PIN must be exactly 4 digits, or leave it blank.';
     return;
   }
   const ok = Profiles.create(name);
@@ -289,6 +388,7 @@ function submitProfileModal() {
     err.textContent = 'A profile with this name already exists.';
     return;
   }
+  if (pinVal) Profiles.setPin(name, pinVal);
   Profiles.setActive(name);
   Progress.reload();
   updateProfileBadge();
@@ -516,6 +616,12 @@ const Views = {
     const doneClass = done ? ' completed' : '';
     const cbClass = done ? ' checked' : '';
     const cbLabel = done ? 'Done' : 'Mark done';
+    const isNew = (() => {
+      if (!resource.dateAdded) return false;
+      const diffDays = (new Date() - new Date(resource.dateAdded)) / (1000 * 60 * 60 * 24);
+      return diffDays <= 30;
+    })();
+    const newBadgeHtml = isNew ? '<span class="badge-new">NEW</span>' : '';
 
     if (resource.type === 'youtube') {
       const ytId = getYouTubeId(resource.url);
@@ -529,6 +635,7 @@ const Views = {
 
       return `
         <div class="resource-card${doneClass}" id="card-${esc(resource.id)}">
+          ${newBadgeHtml}
           <div class="completed-check">✓</div>
           <div class="resource-thumb">
             ${imgHtml}
@@ -558,6 +665,7 @@ const Views = {
     // Article / link card
     return `
       <div class="resource-card${doneClass}" id="card-${esc(resource.id)}">
+        ${newBadgeHtml}
         <div class="completed-check">✓</div>
         <div class="article-icon-area">
           <div class="article-icon">🔗</div>
