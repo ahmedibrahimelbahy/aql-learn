@@ -9,8 +9,6 @@
 //   4. For articles: set type:"article" and paste the URL
 //   5. Every resource needs a unique "id" string
 //
-// STILL MISSING: Resources marked with "ADD_VIDEO_HERE" need
-// real YouTube URLs — search for the topic and paste the link.
 // ============================================================
 
 const CONTENT = {
@@ -258,19 +256,19 @@ const CONTENT = {
                   id: "agent-4-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI web research agent",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on building an agent that browses the web, collects data, and writes structured reports."
+                  title: "Build Your First AI Agent with n8n (Step-by-Step Beginner Guide)",
+                  url: "https://www.youtube.com/watch?v=lHL8aS1nOD4",
+                  duration: "~25 min",
+                  description: "Step-by-step guide to building an AI agent in n8n that can browse the web, collect data, and compile structured research reports."
                 },
                 {
                   id: "agent-4-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI data extraction workflow",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on automatically extracting and cleaning data from websites and documents with AI."
+                  title: "How I Built a Web Scraping AI Agent - Use AI To Scrape ANYTHING",
+                  url: "https://www.youtube.com/watch?v=G5djZjdxVvo",
+                  duration: "~30 min",
+                  description: "Tech With Tim builds a web scraping AI agent that extracts data from any website automatically — no manual data collection needed."
                 },
                 {
                   id: "agent-4-3",
@@ -291,10 +289,10 @@ const CONTENT = {
                   id: "agent-5-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI social media content agent",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on an agent that monitors trends, drafts posts, and schedules content automatically."
+                  title: "I Built an AI AGENT That Schedules Social Media Content! (No-Code + n8n)",
+                  url: "https://www.youtube.com/watch?v=aha_CocGzhc",
+                  duration: "~20 min",
+                  description: "Build a no-code AI agent that monitors trends, drafts platform-specific posts, and auto-schedules content across all social channels."
                 },
                 {
                   id: "agent-5-2",
@@ -324,10 +322,10 @@ const CONTENT = {
                   id: "agent-6-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI meeting summarizer agent",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on automatically transcribing meetings and extracting action items with AI."
+                  title: "AI Meeting Summarizer Agent | Automate Notes, Summaries & Action Items",
+                  url: "https://www.youtube.com/watch?v=PnSTW-wYn8g",
+                  duration: "~20 min",
+                  description: "Build an AI agent that automatically transcribes meetings, generates clean summaries, and extracts action items — never take manual notes again."
                 },
                 {
                   id: "agent-6-2",
@@ -421,19 +419,19 @@ const CONTENT = {
                   id: "mkt-2-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Generate a month of content with AI",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on building a content pipeline that produces blogs, captions, and newsletters automatically."
+                  title: "The Latest AI-Powered Content Creation Workflow for Business (Speed Challenge!)",
+                  url: "https://www.youtube.com/watch?v=XQL6zV8aRFk",
+                  duration: "~25 min",
+                  description: "A complete AI content pipeline — from topic discovery to publishing — that produces blogs, newsletters, and captions at scale automatically."
                 },
                 {
                   id: "mkt-2-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI SEO content strategy",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a guide on using AI tools to research keywords, write optimized content, and build links."
+                  title: "Automate SEO Keyword Research With AI Agents: Topical Map Expansion",
+                  url: "https://www.youtube.com/watch?v=L8X9KSI6Usw",
+                  duration: "~30 min",
+                  description: "Use AI agents to automate keyword research and topical map expansion — rank faster with less manual effort."
                 },
                 {
                   id: "mkt-2-3",
@@ -463,10 +461,10 @@ const CONTENT = {
                   id: "mkt-3-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Google Analytics + AI insights",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a guide on combining GA4 with AI tools to extract actionable marketing insights."
+                  title: "How to Automate Google Analytics & Ads Reports in Google Slides (No Code + AI Insights)",
+                  url: "https://www.youtube.com/watch?v=ITg_jkOcR3s",
+                  duration: "~20 min",
+                  description: "Automate your GA4 and ads reporting — pull data, generate AI insights, and deliver formatted reports without any manual work."
                 },
                 {
                   id: "mkt-3-3",
@@ -529,10 +527,10 @@ const CONTENT = {
                   id: "img-2-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: DALL-E 3 complete tutorial",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on using DALL-E 3 inside ChatGPT for marketing and content creation."
+                  title: "Dalle 3 Tutorial for Beginners (2025) Full Guide",
+                  url: "https://www.youtube.com/watch?v=x9SQ9yC8aro",
+                  duration: "~20 min",
+                  description: "Complete beginner's guide to DALL-E 3 — how to write prompts, use it inside ChatGPT, and create high-quality images for any use case."
                 },
                 {
                   id: "img-2-2",
@@ -580,10 +578,10 @@ const CONTENT = {
                   id: "img-3-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Batch image generation for teams",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on scaling your visual production workflow for consistent brand output."
+                  title: "Use OpenAI's GPT-4o and DALL-E 3 to Create Bulk Images (Python)",
+                  url: "https://www.youtube.com/watch?v=WtD5r3-qD80",
+                  duration: "~30 min",
+                  description: "Use GPT-4o and DALL-E 3 together to generate large batches of images programmatically — perfect for teams producing high-volume visual content."
                 },
                 {
                   id: "img-3-3",
@@ -664,10 +662,10 @@ const CONTENT = {
                   id: "vid-2-3",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Pika AI video tutorial",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on using Pika to generate and edit short-form AI video content."
+                  title: "Pika - Tutorial for Beginners in 9 MINUTES! [ Pika Labs 2025 ]",
+                  url: "https://www.youtube.com/watch?v=QL6bCyYRMdM",
+                  duration: "9 min",
+                  description: "Everything you need to know about Pika Labs in 9 minutes — text-to-video, image-to-video, and tips for creating great short-form AI content."
                 },
                 {
                   id: "vid-2-4",
@@ -689,19 +687,19 @@ const CONTENT = {
                   id: "vid-3-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Full AI video production pipeline",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial combining image gen + video gen + voiceover AI to produce complete videos."
+                  title: "How to Make AI Videos Free | Script - Voice Over - Images",
+                  url: "https://www.youtube.com/watch?v=CX5GH_nh6uY",
+                  duration: "~20 min",
+                  description: "End-to-end free AI video workflow — write the script, generate voiceover, create images, and assemble a complete polished video from scratch."
                 },
                 {
                   id: "vid-3-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: AI video for social media (Reels, TikTok, Shorts)",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on creating scroll-stopping short-form video content using AI tools."
+                  title: "AI Social Media Automation: Post Reels, Shorts & TikToks 100% on Autopilot!",
+                  url: "https://www.youtube.com/watch?v=FmaGofyT2C0",
+                  duration: "~25 min",
+                  description: "Build a fully automated social video pipeline — AI generates, edits, and posts Reels, Shorts, and TikToks without you lifting a finger."
                 },
                 {
                   id: "vid-3-3",
@@ -819,19 +817,19 @@ const CONTENT = {
                   id: "web-3-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Deploy to Vercel tutorial",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on deploying your web app to Vercel with a custom domain and automatic CI/CD."
+                  title: "How To Deploy on Vercel (2026 Updated Tutorial)",
+                  url: "https://www.youtube.com/watch?v=3izAncxuO78",
+                  duration: "~15 min",
+                  description: "Step-by-step guide to deploying your web app on Vercel — custom domains, environment variables, and automatic CI/CD from GitHub in minutes."
                 },
                 {
                   id: "web-3-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Web performance optimization with AI",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on using AI tools to analyze and fix performance bottlenecks in your site."
+                  title: "How to Optimize Your Website for AI (Step by Step)",
+                  url: "https://www.youtube.com/watch?v=1UaC5bnH1Uw",
+                  duration: "~20 min",
+                  description: "Practical techniques for optimizing your site's performance and visibility so AI tools and search engines can index and surface it effectively."
                 },
                 {
                   id: "web-3-3",
@@ -861,19 +859,19 @@ const CONTENT = {
                   id: "app-1-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Bubble.io full tutorial",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a complete Bubble.io tutorial for building apps without writing code."
+                  title: "Complete Bubble.io Course for Beginners: Build an App in 2025",
+                  url: "https://www.youtube.com/watch?v=6N5Gny4YlbU",
+                  duration: "~60 min",
+                  description: "Full Bubble.io course for beginners — build a complete web app from scratch using Bubble's visual drag-and-drop editor, no coding required."
                 },
                 {
                   id: "app-1-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: FlutterFlow no-code mobile app",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a tutorial on creating native iOS and Android apps visually with FlutterFlow."
+                  title: "Re-Introducing FlutterFlow: Build Mobile & Web Apps Without Writing a Single Line of Code",
+                  url: "https://www.youtube.com/watch?v=n_qSnxg4sxM",
+                  duration: "~25 min",
+                  description: "FlutterFlow's updated overview — build native iOS, Android, and web apps visually with no code, and deploy directly to the App Store."
                 },
                 {
                   id: "app-1-3",
@@ -912,10 +910,10 @@ const CONTENT = {
                   id: "app-2-3",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Build an app with Claude API",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a step-by-step guide to integrating Anthropic's Claude API into a real application."
+                  title: "Claude Code Tutorial for Beginners: Build App with AI (2026)",
+                  url: "https://www.youtube.com/watch?v=6q8joS_592k",
+                  duration: "~30 min",
+                  description: "Mikey No Code's beginner-friendly guide to building real apps with Claude Code and the Anthropic API — from zero to working product."
                 },
                 {
                   id: "app-2-4",
@@ -936,19 +934,19 @@ const CONTENT = {
                   id: "app-3-1",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Submit app to App Store",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a walkthrough of the Apple App Store submission process."
+                  title: "React Native Full Course 2026 | Build, Publish and Monetize a Full Stack Mobile App to App Store",
+                  url: "https://www.youtube.com/watch?v=4nVoLX2taFg",
+                  duration: "6+ hrs",
+                  description: "JavaScript Mastery's complete React Native course — build a full-stack mobile app and walk through the full Apple App Store submission process."
                 },
                 {
                   id: "app-3-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "ADD_VIDEO_HERE: Monetize your AI app",
-                  url: "https://www.youtube.com/watch?v=ADD_VIDEO_HERE",
-                  duration: "",
-                  description: "Find a guide on how to price and monetize AI-powered apps effectively."
+                  title: "Launch A Real App Using Only One AI Tool (+Monetization Guide)",
+                  url: "https://www.youtube.com/watch?v=JqX-ItNEWSI",
+                  duration: "~20 min",
+                  description: "Build and launch a real AI-powered app using a single tool — includes a practical guide on how to price, package, and monetize it from day one."
                 },
                 {
                   id: "app-3-3",
