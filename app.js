@@ -514,7 +514,7 @@ const Views = {
       return `
         <div class="subtrack-card" onclick="Router.navigate('track/${esc(track.id)}')">
           <div class="subtrack-header">
-            <div class="subtrack-icon">${track.icon}</div>
+            <div class="subtrack-icon">${track.avatar ? `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar">` : track.icon}</div>
             <div class="subtrack-title-wrap">
               <h3>${esc(track.name)}</h3>
               <div class="subtrack-meta">
@@ -555,7 +555,12 @@ const Views = {
       Router.navigate(`pillar/${pillar.id}`);
 
     // Header
-    document.getElementById('track-icon').textContent = track.icon;
+    const trackIconEl = document.getElementById('track-icon');
+    if (track.avatar) {
+      trackIconEl.innerHTML = `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar">`;
+    } else {
+      trackIconEl.textContent = track.icon;
+    }
     document.getElementById('track-title').textContent = track.name;
     document.getElementById('track-desc').textContent = track.description;
     document.getElementById('track-meta').innerHTML = `

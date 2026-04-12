@@ -981,6 +981,7 @@ const CONTENT = {
           id: "nate-herk-channel",
           name: "Nate Herk",
           icon: "⚡",
+          avatar: "https://nateherk.com/images/pfp.png",
           description: "AI automation expert helping non-technical people build AI agents and n8n workflows. Posts 3–5× per week on the latest Claude, n8n, and automation tools.",
           estimatedTime: "Self-paced",
           phases: [
@@ -1071,6 +1072,7 @@ const CONTENT = {
           id: "jack-roberts-channel",
           name: "Jack Roberts",
           icon: "🧠",
+          avatar: "https://beehiiv-images-production.s3.amazonaws.com/uploads/user/profile_picture/6a22f3df-8de7-401d-ab0b-7c1cac183256/WhatsApp_Image_2025-05-05_at_18.51.27.jpeg",
           description: "Top-100 UK entrepreneur who built a 7-figure AI automation business. Teaches Claude Code, Cowork, and real systems that run actual businesses — posts daily.",
           estimatedTime: "Self-paced",
           phases: [
@@ -1152,6 +1154,7 @@ const CONTENT = {
           id: "liam-ottley-channel",
           name: "Liam Ottley",
           icon: "🚀",
+          avatar: "https://www.liamottley.com/hero.png",
           description: "NZ entrepreneur who invented the AI Automation Agency model. Teaches how to build, sell, and scale AI agent businesses — 290,000+ community members.",
           estimatedTime: "Self-paced",
           phases: [

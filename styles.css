@@ -377,6 +377,14 @@ nav {
   background: rgba(124, 58, 237, 0.2);
 }
 
+.creator-avatar {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
 .subtrack-title-wrap {
   flex: 1;
   min-width: 0;
