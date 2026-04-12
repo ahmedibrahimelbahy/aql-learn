@@ -1154,7 +1154,7 @@ const CONTENT = {
           id: "liam-ottley-channel",
           name: "Liam Ottley",
           icon: "🚀",
-          avatar: "https://www.liamottley.com/hero.png",
+          avatar: "https://yt3.googleusercontent.com/QlE3Bn2UDZv2aRF5Slz2E5BoFscjFhJ8sDBJbGa93gbx5aMuuFdDSPX8SdgYSzybPPjlThrx8g=s176-c-k-c0x00ffffff-no-rj",
           description: "NZ entrepreneur who invented the AI Automation Agency model. Teaches how to build, sell, and scale AI agent businesses — 290,000+ community members.",
           estimatedTime: "Self-paced",
           phases: [
