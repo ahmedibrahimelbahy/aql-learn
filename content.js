@@ -482,81 +482,72 @@ const CONTENT = {
           id: "image-gen",
           name: "Image Generation",
           icon: "🎨",
-          description: "Create stunning visuals with AI — master Midjourney, DALL-E, Stable Diffusion, and Flux for marketing and branding.",
+          description: "Create stunning visuals with AI — master Google's Nano Banana (Gemini Image) and Higgsfield, the leading image tools dominating in 2026.",
           estimatedTime: "5 weeks",
           phases: [
             {
               id: "img-phase-1",
-              name: "Prompt Engineering Basics",
+              name: "Nano Banana — Google's AI Image Model",
               timeline: "Week 1–2",
               resources: [
                 {
                   id: "img-1-1",
-                  dateAdded: "2025-01-01",
+                  dateAdded: "2025-08-20",
                   type: "youtube",
-                  title: "Midjourney AI Tutorial: How to Use Midjourney to Create Stunning Art",
-                  url: "https://www.youtube.com/watch?v=9WVZbitXbck",
-                  duration: "25 min",
-                  description: "Kevin Stratvert's complete Midjourney guide — account setup, prompting, parameters, and advanced techniques."
+                  title: "This will replace Photoshop... And it's FREE!",
+                  url: "https://www.youtube.com/watch?v=9eYKbppNbk8",
+                  duration: "17 min",
+                  description: "Matt Wolfe's hands-on intro to Nano Banana (Google Gemini Image) — the free AI image editor that rivals Photoshop for editing, inpainting, and style transfer."
                 },
                 {
                   id: "img-1-2",
-                  dateAdded: "2025-01-01",
+                  dateAdded: "2025-10-26",
                   type: "youtube",
-                  title: "How to Write Great Prompts for AI Image Generators",
-                  url: "https://www.youtube.com/watch?v=6RAStep_3OI",
-                  duration: "20 min",
-                  description: "Learn the universal prompt principles that work across Midjourney, Stable Diffusion, DALL-E 3, and any image AI — style, composition, lighting, and more."
+                  title: "50+ INSANE Ways To Use Nano Banana (For FREE)",
+                  url: "https://www.youtube.com/watch?v=exWEkRHmhKU",
+                  duration: "27 min",
+                  description: "Matt Wolfe demonstrates 50+ creative uses: headshots, magazine covers, background swaps, character consistency, mockups, thumbnails, and more — all free."
                 },
                 {
                   id: "img-1-3",
-                  dateAdded: "2025-01-01",
+                  dateAdded: "2026-01-01",
                   type: "article",
-                  title: "Midjourney Official Prompt Guide",
-                  url: "https://docs.midjourney.com/docs/prompts",
-                  description: "Official Midjourney prompting documentation with examples and parameters."
+                  title: "Nano Banana 2: Google's Latest AI Image Generation Model",
+                  url: "https://blog.google/innovation-and-ai/technology/ai/nano-banana-2/",
+                  description: "Official Google blog: Nano Banana 2 (Gemini 3.1 Flash Image) — faster generation, native 2K resolution, physics-accurate lighting, and 95% character consistency."
                 }
               ]
             },
             {
               id: "img-phase-2",
-              name: "Tool Deep-Dives",
+              name: "Higgsfield & Modern Image Tools",
               timeline: "Week 3–4",
               resources: [
                 {
                   id: "img-2-1",
-                  dateAdded: "2025-01-01",
+                  dateAdded: "2025-12-16",
                   type: "youtube",
-                  title: "Dalle 3 Tutorial for Beginners (2025) Full Guide",
-                  url: "https://www.youtube.com/watch?v=x9SQ9yC8aro",
-                  duration: "~20 min",
-                  description: "Complete beginner's guide to DALL-E 3 — how to write prompts, use it inside ChatGPT, and create high-quality images for any use case."
+                  title: "Higgsfield AI Ultimate Tutorial (2026)",
+                  url: "https://www.youtube.com/watch?v=cksEVv1tArI",
+                  duration: "~30 min",
+                  description: "Complete 2026 guide to Higgsfield — the AI platform aggregating 50+ models (Nano Banana 2, Kling, Veo, Sora, Seedream). Covers image generation, Canvas, Soul ID character consistency, and Cinema Studio."
                 },
                 {
                   id: "img-2-2",
                   dateAdded: "2025-01-01",
                   type: "youtube",
-                  title: "How to Install & Use Stable Diffusion on Windows",
-                  url: "https://www.youtube.com/watch?v=onmqbI5XPH8",
-                  duration: "25 min",
-                  description: "Kevin Stratvert's step-by-step guide — install Stable Diffusion locally, load models, and start generating unlimited images for free."
-                },
-                {
-                  id: "img-2-3",
-                  dateAdded: "2025-01-01",
-                  type: "youtube",
                   title: "Flux 1.1 UPDATE: Create CONSISTENT AI Influencers With BEST Image Generator",
                   url: "https://www.youtube.com/watch?v=CGPCjazydK0",
                   duration: "20 min",
-                  description: "Learn Flux 1.1 — currently the most photorealistic AI image generator — and how to create consistent characters."
+                  description: "Flux 1.1 remains a top open-source option for photorealistic, locally-run image generation with consistent characters."
                 },
                 {
-                  id: "img-2-4",
-                  dateAdded: "2025-01-01",
+                  id: "img-2-3",
+                  dateAdded: "2026-01-01",
                   type: "article",
-                  title: "Midjourney vs DALL-E vs Stable Diffusion: Full Comparison",
-                  url: "https://www.tomsguide.com/ai/ai-image-generation/midjourney-vs-dall-e-3-vs-stable-diffusion",
-                  description: "Detailed side-by-side comparison of the top image generation tools."
+                  title: "Nano Banana Pro: Gemini 3 Pro Image Model from Google DeepMind",
+                  url: "https://blog.google/innovation-and-ai/products/nano-banana-pro/",
+                  description: "Official launch post for Nano Banana Pro — studio-grade controls, 4K resolution, legible text in 100+ languages, available in Gemini app and Google AI Studio."
                 }
               ]
             },
@@ -572,7 +563,7 @@ const CONTENT = {
                   title: "ComfyUI Starter Guide: How and Why to Use It",
                   url: "https://www.youtube.com/watch?v=5dBAIhx28ow",
                   duration: "22 min",
-                  description: "Olivio Sarikas introduces ComfyUI's node-based workflow system — unlock full control over image generation pipelines and advanced techniques."
+                  description: "Olivio Sarikas introduces ComfyUI's node-based workflow system — unlock full control over image generation pipelines for Flux and other open-source models."
                 },
                 {
                   id: "img-3-2",
@@ -581,7 +572,7 @@ const CONTENT = {
                   title: "Use OpenAI's GPT-4o and DALL-E 3 to Create Bulk Images (Python)",
                   url: "https://www.youtube.com/watch?v=WtD5r3-qD80",
                   duration: "~30 min",
-                  description: "Use GPT-4o and DALL-E 3 together to generate large batches of images programmatically — perfect for teams producing high-volume visual content."
+                  description: "Automate large-scale image production via API — a useful pattern for teams generating high-volume visual assets programmatically."
                 },
                 {
                   id: "img-3-3",
@@ -589,7 +580,7 @@ const CONTENT = {
                   type: "article",
                   title: "AI Image Generation for Commercial Use: Legal Guide",
                   url: "https://creativecommons.org/2023/08/18/cc-and-generative-ai/",
-                  description: "Understand copyright and licensing when using AI-generated images commercially."
+                  description: "Understand copyright and licensing considerations when using AI-generated images commercially."
                 }
               ]
             }
@@ -599,7 +590,7 @@ const CONTENT = {
           id: "video-gen",
           name: "Video Generation",
           icon: "🎬",
-          description: "Create AI-generated videos from text and images — master Sora, Runway, Kling, Pika, and more.",
+          description: "Create AI-generated videos from text and images — master Higgsfield, Runway, Kling, Sora, and more for cinematic results in 2026.",
           estimatedTime: "5 weeks",
           phases: [
             {
@@ -614,7 +605,7 @@ const CONTENT = {
                   title: "The Best AI Video Generators of 2025!",
                   url: "https://www.youtube.com/watch?v=qblrpjsJb3I",
                   duration: "25 min",
-                  description: "Curious Refuge tests and ranks every major AI video tool — Runway, Kling, Pika, Luma, and more — so you know exactly where to start."
+                  description: "Curious Refuge tests and ranks every major AI video tool — Runway, Kling, Pika, Luma, Higgsfield, and more — so you know exactly where to start."
                 },
                 {
                   id: "vid-1-2",
@@ -627,11 +618,11 @@ const CONTENT = {
                 },
                 {
                   id: "vid-1-3",
-                  dateAdded: "2025-01-01",
+                  dateAdded: "2026-01-01",
                   type: "article",
-                  title: "Best AI Video Generators: 2024 Comparison",
+                  title: "Best AI Video Generators: 2026 Comparison",
                   url: "https://www.tomsguide.com/ai/ai-video-generators",
-                  description: "Side-by-side comparison of Sora, Runway, Kling, Pika, and more."
+                  description: "Side-by-side comparison of Sora, Runway, Kling, Pika, Higgsfield, and more — kept current by Tom's Guide."
                 }
               ]
             },
@@ -675,6 +666,15 @@ const CONTENT = {
                   url: "https://www.youtube.com/watch?v=qQVDTX4qDbM",
                   duration: "1 hr",
                   description: "Combine Midjourney images with Runway Gen-3 to produce cinematic AI videos from scratch."
+                },
+                {
+                  id: "vid-2-5",
+                  dateAdded: "2026-03-12",
+                  type: "youtube",
+                  title: "AI Short Film: Full Process from Idea to Final Cut",
+                  url: "https://www.youtube.com/watch?v=tW40b122Rbs",
+                  duration: "~20 min",
+                  description: "Higgsfield AI's official walkthrough of producing a complete cinematic AI short film — character building, scene generation, Soul ID consistency, and final cut — using Cinema Studio."
                 }
               ]
             },
