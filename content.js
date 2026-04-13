@@ -1230,6 +1230,239 @@ const CONTENT = {
         }
 
       ]
+    },
+
+    // =========================================================
+    // PILLAR 5 — OFFICIAL CLAUDE COURSES
+    // =========================================================
+    {
+      id: "official-courses",
+      name: "Official Claude Courses",
+      icon: "🎓",
+      description: "Structured learning paths built by Anthropic — video lessons, quizzes, and certifications covering Claude usage, Claude Code, the API, and MCP.",
+      color: "#10b981",
+      subtracks: [
+
+        // ── AI Fluency ────────────────────────────────────────
+        {
+          id: "ai-fluency",
+          name: "AI Fluency",
+          icon: "💡",
+          description: "Master AI collaboration and learn to work effectively with Claude — courses for professionals, students, educators, and nonprofits.",
+          estimatedTime: "3–4 hrs",
+          phases: [
+            {
+              id: "fluency-phase-1",
+              name: "Core Foundations",
+              timeline: "Start here",
+              resources: [
+                {
+                  id: "cl-101",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Claude 101",
+                  url: "https://claude.com/courses/claude-101",
+                  duration: "1 hr · 12 lectures",
+                  description: "Anthropic's official intro to Claude.ai — learn how to use Claude effectively for real work. 12 lectures covering core features, prompting, and workflows."
+                },
+                {
+                  id: "cl-ai-fluency-foundations",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "AI Fluency: Framework & Foundations",
+                  url: "https://claude.com/courses/ai-fluency-framework-foundations",
+                  duration: "1.1 hrs · 14 lectures · 1 quiz",
+                  description: "The definitive foundation course for working with AI — a structured framework and mindset shift for professionals entering the AI era."
+                }
+              ]
+            },
+            {
+              id: "fluency-phase-2",
+              name: "By Audience",
+              timeline: "Pick your path",
+              resources: [
+                {
+                  id: "cl-fluency-students",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "AI Fluency for Students",
+                  url: "https://claude.com/courses/ai-fluency-for-students",
+                  duration: "30 min · 5 lectures",
+                  description: "How students can use Claude to research, write, study, and learn faster — without compromising academic integrity."
+                },
+                {
+                  id: "cl-fluency-educators",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "AI Fluency for Educators",
+                  url: "https://claude.com/courses/ai-fluency-for-educators",
+                  duration: "24 min · 4 lectures",
+                  description: "A course for teachers and professors on integrating AI into the classroom — lesson planning, assessments, and student engagement."
+                },
+                {
+                  id: "cl-teaching-fluency",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Teaching AI Fluency",
+                  url: "https://claude.com/courses/teaching-ai-fluency",
+                  duration: "36 min · 7 lectures · 1 quiz",
+                  description: "For educators who want to teach AI fluency to others — frameworks, curriculum design, and classroom strategies."
+                },
+                {
+                  id: "cl-fluency-nonprofits",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "AI Fluency for Nonprofits",
+                  url: "https://claude.com/courses/ai-fluency-for-nonprofits",
+                  duration: "54 min · 9 lectures · 1 quiz",
+                  description: "Purpose-built for nonprofit teams — use Claude for grant writing, communications, volunteer coordination, and impact reporting."
+                }
+              ]
+            }
+          ]
+        },
+
+        // ── Claude Code ───────────────────────────────────────
+        {
+          id: "claude-code-courses",
+          name: "Claude Code",
+          icon: "💻",
+          description: "Official courses for developers using Claude Code — from first steps to autonomous subagents and custom skills.",
+          estimatedTime: "4–5 hrs",
+          phases: [
+            {
+              id: "cc-phase-1",
+              name: "Getting Started",
+              timeline: "Beginner",
+              resources: [
+                {
+                  id: "cl-code-101",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Claude Code 101",
+                  url: "https://claude.com/courses/claude-code-101",
+                  duration: "1 hr · 12 lectures",
+                  description: "Everything you need to start shipping with Claude Code — installation, core commands, project setup, and your first AI-assisted codebase."
+                },
+                {
+                  id: "cl-code-in-action",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Claude Code in Action",
+                  url: "https://claude.com/courses/claude-code-in-action",
+                  duration: "1 hr · 15 lectures · 1 quiz",
+                  description: "Real-world Claude Code workflows — build features, debug codebases, write tests, and automate dev tasks with Claude as your pair programmer."
+                },
+                {
+                  id: "cl-cowork",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Introduction to Claude Cowork",
+                  url: "https://claude.com/courses/introduction-to-claude-cowork",
+                  duration: "Self-paced",
+                  description: "Get up to speed with Claude Cowork — Anthropic's collaborative AI workspace for teams. Learn to work alongside Claude on shared projects."
+                }
+              ]
+            },
+            {
+              id: "cc-phase-2",
+              name: "Agents & Skills",
+              timeline: "Advanced",
+              resources: [
+                {
+                  id: "cl-subagents",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Introduction to Subagents",
+                  url: "https://claude.com/courses/introduction-to-subagents",
+                  duration: "20 min · 4 lectures",
+                  description: "Learn how Claude Code spawns and coordinates subagents — parallel task execution, agent delegation, and multi-agent workflows."
+                },
+                {
+                  id: "cl-agent-skills",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Introduction to Agent Skills",
+                  url: "https://claude.com/courses/introduction-to-agent-skills",
+                  duration: "30 min · 6 lectures",
+                  description: "Build and deploy custom agent skills that extend Claude Code's capabilities — create reusable tools for your specific workflows."
+                }
+              ]
+            }
+          ]
+        },
+
+        // ── Claude Platform & MCP ─────────────────────────────
+        {
+          id: "claude-platform-courses",
+          name: "Claude API & MCP",
+          icon: "🔌",
+          description: "Build production-grade AI apps with the Claude API, deploy on Amazon Bedrock or Google Vertex AI, and master the Model Context Protocol.",
+          estimatedTime: "18+ hrs",
+          phases: [
+            {
+              id: "platform-phase-1",
+              name: "Claude API",
+              timeline: "Core",
+              resources: [
+                {
+                  id: "cl-api-course",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Building with the Claude API",
+                  url: "https://claude.com/courses/building-with-the-claude-api",
+                  duration: "8.1 hrs · 84 lectures · 10 quizzes",
+                  description: "The most comprehensive Claude API course from Anthropic — covers authentication, messages API, tool use, streaming, embeddings, and production best practices."
+                },
+                {
+                  id: "cl-bedrock",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Claude with Amazon Bedrock",
+                  url: "https://claude.com/courses/claude-with-amazon-bedrock",
+                  duration: "8 hrs · 85 lectures · 10 quizzes",
+                  description: "Deploy Claude on AWS using Amazon Bedrock — IAM, inference, fine-tuning, model evaluation, and enterprise-grade scaling on AWS infrastructure."
+                },
+                {
+                  id: "cl-vertex",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Claude with Google Cloud's Vertex AI",
+                  url: "https://claude.com/courses/claude-with-google-clouds-vertex-ai",
+                  duration: "8 hrs · 85 lectures · 10 quizzes",
+                  description: "Run Claude on Google Cloud via Vertex AI — authentication, API integration, scaling, and building production AI apps on GCP."
+                }
+              ]
+            },
+            {
+              id: "platform-phase-2",
+              name: "Model Context Protocol",
+              timeline: "Advanced",
+              resources: [
+                {
+                  id: "cl-mcp-intro",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Introduction to Model Context Protocol",
+                  url: "https://claude.com/courses/introduction-to-model-context-protocol",
+                  duration: "1 hr · 16 lectures · 1 quiz",
+                  description: "Learn MCP from Anthropic — understand the protocol, build your first MCP server, connect Claude to external tools and data sources."
+                },
+                {
+                  id: "cl-mcp-advanced",
+                  dateAdded: "2026-04-13",
+                  type: "article",
+                  title: "Model Context Protocol: Advanced Topics",
+                  url: "https://claude.com/courses/model-context-protocol-advanced-topics",
+                  duration: "1.1 hrs · 15 lectures · 2 quizzes",
+                  description: "Go deeper into MCP — advanced server patterns, authentication, resource management, and deploying MCP servers to production."
+                }
+              ]
+            }
+          ]
+        }
+
+      ]
     }
 
   ]
