@@ -667,6 +667,33 @@ const Views = {
       `;
     }
 
+    // Course card (Anthropic Skilljar / official courses)
+    if (resource.type === 'course') {
+      return `
+        <div class="resource-card${doneClass}" id="card-${esc(resource.id)}">
+          ${newBadgeHtml}
+          <div class="completed-check">✓</div>
+          <div class="article-icon-area">
+            <div class="article-icon" style="background:rgba(16,185,129,0.1);border-color:rgba(16,185,129,0.2)">🎓</div>
+          </div>
+          <div class="resource-body">
+            <span class="resource-type course">🎓 Course</span>
+            <div class="resource-title">${esc(resource.title)}</div>
+            <div class="resource-desc">${esc(resource.description || '')}</div>
+            <div class="resource-footer">
+              <a class="btn-open" href="${esc(resource.url)}" target="_blank" rel="noopener noreferrer">
+                Enroll ↗
+              </a>
+              <div class="mark-done-wrap" onclick="toggleDone('${esc(resource.id)}', event)">
+                <div class="check-box${cbClass}" id="cb-${esc(resource.id)}"></div>
+                <span id="cb-label-${esc(resource.id)}">${cbLabel}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
     // Article / link card
     return `
       <div class="resource-card${doneClass}" id="card-${esc(resource.id)}">

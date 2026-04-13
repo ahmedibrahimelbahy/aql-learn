@@ -1259,18 +1259,18 @@ const CONTENT = {
                 {
                   id: "cl-101",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Claude 101",
-                  url: "https://claude.com/courses/claude-101",
+                  url: "https://anthropic.skilljar.com/claude-101",
                   duration: "1 hr · 12 lectures",
                   description: "Anthropic's official intro to Claude.ai — learn how to use Claude effectively for real work. 12 lectures covering core features, prompting, and workflows."
                 },
                 {
                   id: "cl-ai-fluency-foundations",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "AI Fluency: Framework & Foundations",
-                  url: "https://claude.com/courses/ai-fluency-framework-foundations",
+                  url: "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
                   duration: "1.1 hrs · 14 lectures · 1 quiz",
                   description: "The definitive foundation course for working with AI — a structured framework and mindset shift for professionals entering the AI era."
                 }
@@ -1284,36 +1284,36 @@ const CONTENT = {
                 {
                   id: "cl-fluency-students",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "AI Fluency for Students",
-                  url: "https://claude.com/courses/ai-fluency-for-students",
+                  url: "https://anthropic.skilljar.com/ai-fluency-for-students",
                   duration: "30 min · 5 lectures",
                   description: "How students can use Claude to research, write, study, and learn faster — without compromising academic integrity."
                 },
                 {
                   id: "cl-fluency-educators",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "AI Fluency for Educators",
-                  url: "https://claude.com/courses/ai-fluency-for-educators",
+                  url: "https://anthropic.skilljar.com/ai-fluency-for-educators",
                   duration: "24 min · 4 lectures",
                   description: "A course for teachers and professors on integrating AI into the classroom — lesson planning, assessments, and student engagement."
                 },
                 {
                   id: "cl-teaching-fluency",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Teaching AI Fluency",
-                  url: "https://claude.com/courses/teaching-ai-fluency",
+                  url: "https://anthropic.skilljar.com/teaching-ai-fluency",
                   duration: "36 min · 7 lectures · 1 quiz",
                   description: "For educators who want to teach AI fluency to others — frameworks, curriculum design, and classroom strategies."
                 },
                 {
                   id: "cl-fluency-nonprofits",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "AI Fluency for Nonprofits",
-                  url: "https://claude.com/courses/ai-fluency-for-nonprofits",
+                  url: "https://anthropic.skilljar.com/ai-fluency-for-nonprofits",
                   duration: "54 min · 9 lectures · 1 quiz",
                   description: "Purpose-built for nonprofit teams — use Claude for grant writing, communications, volunteer coordination, and impact reporting."
                 }
@@ -1338,27 +1338,27 @@ const CONTENT = {
                 {
                   id: "cl-code-101",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Claude Code 101",
-                  url: "https://claude.com/courses/claude-code-101",
+                  url: "https://anthropic.skilljar.com/claude-code-101",
                   duration: "1 hr · 12 lectures",
                   description: "Everything you need to start shipping with Claude Code — installation, core commands, project setup, and your first AI-assisted codebase."
                 },
                 {
                   id: "cl-code-in-action",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Claude Code in Action",
-                  url: "https://claude.com/courses/claude-code-in-action",
+                  url: "https://anthropic.skilljar.com/claude-code-in-action",
                   duration: "1 hr · 15 lectures · 1 quiz",
                   description: "Real-world Claude Code workflows — build features, debug codebases, write tests, and automate dev tasks with Claude as your pair programmer."
                 },
                 {
                   id: "cl-cowork",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Introduction to Claude Cowork",
-                  url: "https://claude.com/courses/introduction-to-claude-cowork",
+                  url: "https://anthropic.skilljar.com/introduction-to-claude-cowork",
                   duration: "Self-paced",
                   description: "Get up to speed with Claude Cowork — Anthropic's collaborative AI workspace for teams. Learn to work alongside Claude on shared projects."
                 }
@@ -1372,18 +1372,18 @@ const CONTENT = {
                 {
                   id: "cl-subagents",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Introduction to Subagents",
-                  url: "https://claude.com/courses/introduction-to-subagents",
+                  url: "https://anthropic.skilljar.com/introduction-to-subagents",
                   duration: "20 min · 4 lectures",
                   description: "Learn how Claude Code spawns and coordinates subagents — parallel task execution, agent delegation, and multi-agent workflows."
                 },
                 {
                   id: "cl-agent-skills",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Introduction to Agent Skills",
-                  url: "https://claude.com/courses/introduction-to-agent-skills",
+                  url: "https://anthropic.skilljar.com/introduction-to-agent-skills",
                   duration: "30 min · 6 lectures",
                   description: "Build and deploy custom agent skills that extend Claude Code's capabilities — create reusable tools for your specific workflows."
                 }
@@ -1408,27 +1408,27 @@ const CONTENT = {
                 {
                   id: "cl-api-course",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Building with the Claude API",
-                  url: "https://claude.com/courses/building-with-the-claude-api",
+                  url: "https://anthropic.skilljar.com/claude-with-the-anthropic-api",
                   duration: "8.1 hrs · 84 lectures · 10 quizzes",
                   description: "The most comprehensive Claude API course from Anthropic — covers authentication, messages API, tool use, streaming, embeddings, and production best practices."
                 },
                 {
                   id: "cl-bedrock",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Claude with Amazon Bedrock",
-                  url: "https://claude.com/courses/claude-with-amazon-bedrock",
+                  url: "https://anthropic.skilljar.com/claude-in-amazon-bedrock",
                   duration: "8 hrs · 85 lectures · 10 quizzes",
                   description: "Deploy Claude on AWS using Amazon Bedrock — IAM, inference, fine-tuning, model evaluation, and enterprise-grade scaling on AWS infrastructure."
                 },
                 {
                   id: "cl-vertex",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Claude with Google Cloud's Vertex AI",
-                  url: "https://claude.com/courses/claude-with-google-clouds-vertex-ai",
+                  url: "https://anthropic.skilljar.com/claude-with-google-vertex",
                   duration: "8 hrs · 85 lectures · 10 quizzes",
                   description: "Run Claude on Google Cloud via Vertex AI — authentication, API integration, scaling, and building production AI apps on GCP."
                 }
@@ -1442,18 +1442,18 @@ const CONTENT = {
                 {
                   id: "cl-mcp-intro",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Introduction to Model Context Protocol",
-                  url: "https://claude.com/courses/introduction-to-model-context-protocol",
+                  url: "https://anthropic.skilljar.com/introduction-to-model-context-protocol",
                   duration: "1 hr · 16 lectures · 1 quiz",
                   description: "Learn MCP from Anthropic — understand the protocol, build your first MCP server, connect Claude to external tools and data sources."
                 },
                 {
                   id: "cl-mcp-advanced",
                   dateAdded: "2026-04-13",
-                  type: "article",
+                  type: "course",
                   title: "Model Context Protocol: Advanced Topics",
-                  url: "https://claude.com/courses/model-context-protocol-advanced-topics",
+                  url: "https://anthropic.skilljar.com/model-context-protocol-advanced-topics",
                   duration: "1.1 hrs · 15 lectures · 2 quizzes",
                   description: "Go deeper into MCP — advanced server patterns, authentication, resource management, and deploying MCP servers to production."
                 }

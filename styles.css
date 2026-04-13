@@ -731,6 +731,12 @@ nav {
   border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
+.resource-type.course {
+  background: rgba(16, 185, 129, 0.1);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
 .resource-title {
   font-size: 0.9rem;
   font-weight: 600;
