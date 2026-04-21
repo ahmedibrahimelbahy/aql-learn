@@ -572,10 +572,19 @@ function renderConstellation() {
 
   let out = '';
 
-  // Background connecting constellation lines between pillars
+  // Connecting constellation path between pillar cores
   for (let i = 0; i < positions.length - 1; i++) {
     const a = positions[i], b = positions[i + 1];
-    out += `<line class="resource-line" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`;
+    // Base glow line
+    out += `<line class="pillar-connector-glow" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`;
+    // Dashed animated line
+    out += `<line class="pillar-connector" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`;
+    // Data packet that travels the line
+    const dx = b.x - a.x, dy = b.y - a.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+    out += `<circle class="data-packet" r="2.2">`;
+    out += `<animateMotion dur="${(dist / 140).toFixed(2)}s" repeatCount="indefinite" begin="${(i * 0.8).toFixed(2)}s" path="M${a.x},${a.y} L${b.x},${b.y}"/>`;
+    out += `</circle>`;
   }
 
   // Render each pillar cluster

@@ -880,6 +880,35 @@ nav {
   opacity: 0.6;
 }
 
+/* Pillar-to-pillar connecting path */
+.pillar-connector {
+  stroke: var(--cyan);
+  stroke-width: 1;
+  stroke-dasharray: 6 6;
+  opacity: 0.55;
+  animation: connector-dash 1.8s linear infinite;
+  pointer-events: none;
+}
+
+.pillar-connector-glow {
+  stroke: var(--cyan);
+  stroke-width: 4;
+  opacity: 0.08;
+  filter: blur(2px);
+  pointer-events: none;
+}
+
+@keyframes connector-dash {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: -24; }
+}
+
+.data-packet {
+  fill: var(--cyan);
+  filter: drop-shadow(0 0 6px var(--cyan-glow));
+  pointer-events: none;
+}
+
 /* ---------- Page header (pillar + track views) ---------- */
 .page-header {
   margin-bottom: 3rem;
