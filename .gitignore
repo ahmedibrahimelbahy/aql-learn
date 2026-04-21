@@ -6,3 +6,5 @@
 
 .vercel
 .playwright-mcp/
+test-*.png
+live-check.png

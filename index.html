@@ -6,19 +6,18 @@
   <meta name="description" content="AQL Learn — Neural Command Center for AI mastery. Structured tracks for automation, development, content, and Claude.">
   <title>AQL Learn — Neural Command Center</title>
 
-  <!-- Fonts: Chakra Petch (display) + Geist + Geist Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=neural-4">
+  <link rel="stylesheet" href="styles.css?v=neural-5">
 </head>
 <body>
 
   <!-- ========== AMBIENT ATMOSPHERE ========== -->
   <div class="atmosphere" aria-hidden="true"></div>
 
-  <!-- Reusable SVG defs (gradients for rings etc.) -->
+  <!-- Reusable SVG defs -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs>
       <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -40,7 +39,7 @@
     <div class="nav-breadcrumb" id="breadcrumb"></div>
     <div class="nav-profile" id="profile-widget">
       <div class="profile-badge" id="profile-badge"
-           onclick="toggleProfileDropdown()" title="Switch profile">?</div>
+           onclick="toggleProfileDropdown()" title="Profile">?</div>
       <div class="profile-dropdown" id="profile-dropdown"></div>
     </div>
   </nav>
@@ -112,7 +111,6 @@
         <div class="page-meta" id="track-meta"></div>
       </div>
 
-      <!-- Overall progress -->
       <div class="overall-progress">
         <div class="progress-header">
           <div class="progress-header-left">
@@ -132,94 +130,52 @@
         <div class="segment-bar" id="segment-bar"></div>
       </div>
 
-      <!-- Timeline -->
       <div class="timeline" id="timeline"></div>
     </div>
   </div>
 
-  <!-- ========== PROFILE MODAL ========== -->
-  <div class="modal-overlay" id="profile-modal">
-    <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <div class="modal-scan"></div>
-      <div class="modal-header">
-        <div class="modal-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <circle cx="12" cy="8" r="4"/>
-            <path d="M4 21c0-4.5 3.5-8 8-8s8 3.5 8 8"/>
-          </svg>
-        </div>
-        <div class="modal-label">Identity Registration</div>
-        <h2 id="modal-title">Create Profile</h2>
-        <p>Register a callsign to sync your progress on this device.</p>
-      </div>
-      <div class="modal-body">
-        <input
-          type="text"
-          id="profile-name-input"
-          class="modal-input"
-          placeholder="Callsign (e.g. Ahmed)"
-          maxlength="40"
-          onkeydown="if(event.key==='Enter') submitProfileModal()"
-          autocomplete="off"
-        >
-        <input
-          type="tel"
-          id="profile-pin-input"
-          class="modal-input"
-          placeholder="Optional 4-digit access code"
-          maxlength="4"
-          inputmode="numeric"
-          pattern="[0-9]*"
-          onkeydown="if(event.key==='Enter') submitProfileModal()"
-          autocomplete="off"
-          style="margin-top: 0.7rem;"
-        >
-        <div class="modal-error" id="profile-name-error"></div>
-      </div>
-      <div class="modal-footer">
-        <button class="modal-btn-cancel" id="profile-modal-cancel"
-                onclick="closeProfileModal()">Cancel</button>
-        <button class="modal-btn-confirm" onclick="submitProfileModal()">Initialize</button>
-      </div>
-    </div>
-  </div>
+  <!-- ========== VIEW: ADMIN ========== -->
+  <div class="view" id="view-admin"></div>
 
-  <!-- ========== PIN MODAL ========== -->
-  <div class="modal-overlay" id="pin-modal">
+  <!-- ========== JOIN MODAL (student) ========== -->
+  <div class="modal-overlay" id="join-modal">
     <div class="modal-box" role="dialog" aria-modal="true">
       <div class="modal-scan"></div>
       <div class="modal-header">
         <div class="modal-icon">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
-            <rect x="4" y="10" width="16" height="11" rx="1"/>
-            <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <path d="M3 12l2 2 4-4"/>
+            <circle cx="16" cy="8" r="4"/>
+            <path d="M12 21v-1a4 4 0 0 1 4-4h0a4 4 0 0 1 4 4v1"/>
           </svg>
         </div>
-        <div class="modal-label">Access Control</div>
-        <h2 id="pin-modal-label">Enter PIN</h2>
+        <div class="modal-label">Class Registration</div>
+        <h2>Join Your Class</h2>
+        <p>Enter the class code from your instructor, a callsign, and a password.</p>
       </div>
       <div class="modal-body">
-        <div class="pin-boxes">
-          <input type="tel" class="pin-box" id="pin-d0" maxlength="1" inputmode="numeric"
-                 oninput="_pinHandleInput(this,0)" onkeydown="_pinHandleKey(this,0,event)">
-          <input type="tel" class="pin-box" id="pin-d1" maxlength="1" inputmode="numeric"
-                 oninput="_pinHandleInput(this,1)" onkeydown="_pinHandleKey(this,1,event)">
-          <input type="tel" class="pin-box" id="pin-d2" maxlength="1" inputmode="numeric"
-                 oninput="_pinHandleInput(this,2)" onkeydown="_pinHandleKey(this,2,event)">
-          <input type="tel" class="pin-box" id="pin-d3" maxlength="1" inputmode="numeric"
-                 oninput="_pinHandleInput(this,3)" onkeydown="_pinHandleKey(this,3,event)">
-        </div>
-        <div class="modal-error" id="pin-modal-error"></div>
+        <input id="join-code" class="modal-input" placeholder="Class code" maxlength="40" autocomplete="off"
+               onkeydown="if(event.key==='Enter') submitJoinModal()">
+        <input id="join-name" class="modal-input" placeholder="Callsign (e.g. Ahmed)" maxlength="40" autocomplete="off"
+               style="margin-top:0.7rem"
+               onkeydown="if(event.key==='Enter') submitJoinModal()">
+        <input id="join-password" type="password" class="modal-input" placeholder="Password (6+ characters)"
+               autocomplete="current-password" style="margin-top:0.7rem"
+               onkeydown="if(event.key==='Enter') submitJoinModal()">
+        <div class="modal-error" id="join-error"></div>
       </div>
       <div class="modal-footer">
-        <button class="modal-btn-cancel" onclick="closePinModal()">Cancel</button>
-        <button class="modal-btn-confirm" onclick="submitPinModal()">Unlock</button>
+        <button class="modal-btn-cancel" id="join-modal-cancel" onclick="closeJoinModal()">Cancel</button>
+        <button class="modal-btn-confirm" id="join-submit" onclick="submitJoinModal()">Connect</button>
       </div>
     </div>
   </div>
 
   <!-- ========== SCRIPTS ========== -->
-  <script src="content.js?v=neural-4"></script>
-  <script src="app.js?v=neural-4"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js?v=neural-5"></script>
+  <script src="content.js?v=neural-5"></script>
+  <script src="admin.js?v=neural-5"></script>
+  <script src="app.js?v=neural-5"></script>
 </body>
 </html>
