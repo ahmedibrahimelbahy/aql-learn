@@ -986,8 +986,89 @@ const CONTENT = {
             {
               id: "nate-latest",
               name: "Latest Drops",
-              timeline: "April 2026",
+              timeline: "Jan–Apr 2026",
               resources: [
+                {
+                  id: "nh-9",
+                  dateAdded: "2026-04-20",
+                  type: "youtube",
+                  title: "Claude Just Destroyed Every Video Editing Tool",
+                  url: "https://www.youtube.com/watch?v=ZNbgOhxhzXg",
+                  duration: "~15 min",
+                  description: "Motion graphics that took professionals hours can now be done in minutes with natural language — Nate's breakdown of Claude Design and Claude Code with Hyperframes for video editing."
+                },
+                {
+                  id: "nh-10",
+                  dateAdded: "2026-04-20",
+                  type: "youtube",
+                  title: "How to Never Hit Your Claude Session Limit Again",
+                  url: "https://www.youtube.com/watch?v=_qZvORxGqI0",
+                  duration: "~12 min",
+                  description: "Nate's techniques for managing Claude session limits so your workflows never get interrupted mid-build."
+                },
+                {
+                  id: "nh-11",
+                  dateAdded: "2026-04-17",
+                  type: "youtube",
+                  title: "Claude Design Just Became Unstoppable",
+                  url: "https://www.youtube.com/watch?v=gAoZ95kqG7w",
+                  duration: "~15 min",
+                  description: "The latest Claude Design update that changes everything — what's new and how to use it right now."
+                },
+                {
+                  id: "nh-12",
+                  dateAdded: "2026-04-17",
+                  type: "youtube",
+                  title: "I Turned Claude Opus 4.7 Into a 24/7 Trader",
+                  url: "https://www.youtube.com/watch?v=6MC1XqZSltw",
+                  duration: "~18 min",
+                  description: "Nate builds a fully autonomous AI trading agent using Claude Opus 4.7 that runs around the clock."
+                },
+                {
+                  id: "nh-13",
+                  dateAdded: "2026-04-16",
+                  type: "youtube",
+                  title: "Claude Opus 4.7 Just Dropped... Or Did It Really?",
+                  url: "https://www.youtube.com/watch?v=NiMc2PoTiXo",
+                  duration: "~14 min",
+                  description: "Nate digs into what Claude Opus 4.7 actually is — what changed, what's hype, and what it means for builders."
+                },
+                {
+                  id: "nh-14",
+                  dateAdded: "2026-04-15",
+                  type: "youtube",
+                  title: "Claude + HeyGen Just Changed Content Creation Forever",
+                  url: "https://www.youtube.com/watch?v=EbJu9T30nfI",
+                  duration: "~16 min",
+                  description: "Combining Claude with HeyGen's AI video platform for a fully automated content creation pipeline."
+                },
+                {
+                  id: "nh-15",
+                  dateAdded: "2026-04-14",
+                  type: "youtube",
+                  title: "Claude Code Just Dropped Routines. 24/7 Agents.",
+                  url: "https://www.youtube.com/watch?v=ehg4fhydTgs",
+                  duration: "~15 min",
+                  description: "The new Claude Code Routines feature that lets your agents run on schedules — 24/7 automation is now trivial."
+                },
+                {
+                  id: "nh-16",
+                  dateAdded: "2026-04-13",
+                  type: "youtube",
+                  title: "100 Hours Testing Claude Code vs Antigravity (honest results)",
+                  url: "https://www.youtube.com/watch?v=99VHENEKA9o",
+                  duration: "~20 min",
+                  description: "After 100 hours of real testing — the honest head-to-head between Claude Code and Antigravity for builders."
+                },
+                {
+                  id: "nh-17",
+                  dateAdded: "2026-04-12",
+                  type: "youtube",
+                  title: "This One Plugin Just 10x'd Claude Code",
+                  url: "https://www.youtube.com/watch?v=4XqVR6xI6Kw",
+                  duration: "~14 min",
+                  description: "The single Claude Code plugin that dramatically multiplies what you can build — Nate's full breakdown."
+                },
                 {
                   id: "nh-1",
                   dateAdded: "2026-04-11",
@@ -1059,6 +1140,51 @@ const CONTENT = {
                   url: "https://www.youtube.com/watch?v=F3nYY3N2wgw",
                   duration: "~18 min",
                   description: "Smart token management tricks that cut your Claude Code costs dramatically without sacrificing quality."
+                },
+                {
+                  id: "nh-18",
+                  dateAdded: "2026-04-04",
+                  type: "youtube",
+                  title: "Anthropic Quietly Cut Claude Code Limits - And Banned Open Claw...",
+                  url: "https://www.youtube.com/watch?v=mdneMu5rniI",
+                  duration: "~14 min",
+                  description: "What Anthropic's under-the-radar policy changes mean for Claude Code users and the OpenClaw ecosystem."
+                },
+                {
+                  id: "nh-19",
+                  dateAdded: "2026-04-02",
+                  type: "youtube",
+                  title: "Claude Code + Paperclip Just Destroyed OpenClaw",
+                  url: "https://www.youtube.com/watch?v=HJ-dwefABss",
+                  duration: "~15 min",
+                  description: "The Paperclip tool integration that makes Claude Code more powerful than OpenClaw for complex agent builds."
+                },
+                {
+                  id: "nh-20",
+                  dateAdded: "2026-03-21",
+                  type: "youtube",
+                  title: "Stop Learning n8n in 2026...Learn THIS Instead",
+                  url: "https://www.youtube.com/watch?v=ZeJXI2MAhj0",
+                  duration: "~18 min",
+                  description: "Nate makes the case for what automation builders should be learning instead of n8n in 2026 — and why."
+                },
+                {
+                  id: "nh-21",
+                  dateAdded: "2026-01-21",
+                  type: "youtube",
+                  title: "Master 95% of Claude Code in 36 Mins (as a beginner)",
+                  url: "https://www.youtube.com/watch?v=saggDHHnmtQ",
+                  duration: "36 min",
+                  description: "Nate's ultimate beginner guide to Claude Code — everything you need to start building, compressed into 36 minutes."
+                },
+                {
+                  id: "nh-22",
+                  dateAdded: "2026-01-16",
+                  type: "youtube",
+                  title: "Build ANYTHING with Claude Code & n8n (Beginner's Guide)",
+                  url: "https://www.youtube.com/watch?v=OCO3aq3G0mk",
+                  duration: "~30 min",
+                  description: "How to combine Claude Code with n8n to build any automation you can imagine — the complete beginner workflow."
                 }
               ]
             }
@@ -1077,8 +1203,71 @@ const CONTENT = {
             {
               id: "jack-latest",
               name: "Latest Drops",
-              timeline: "April 2026",
+              timeline: "Jan–Apr 2026",
               resources: [
+                {
+                  id: "jr-10",
+                  dateAdded: "2026-04-20",
+                  type: "youtube",
+                  title: "Claude Design just dropped... Unlock Superpowers",
+                  url: "https://www.youtube.com/watch?v=2vWVGIQF5S0",
+                  duration: "~16 min",
+                  description: "Jack's first look at Claude Design — the new capabilities and how to unlock them for your business."
+                },
+                {
+                  id: "jr-11",
+                  dateAdded: "2026-04-18",
+                  type: "youtube",
+                  title: "Claude Code just changed NotebookLM Forever (Tutorial)",
+                  url: "https://www.youtube.com/watch?v=PkOlfB3RY5Q",
+                  duration: "~18 min",
+                  description: "Full tutorial: use Claude Code to supercharge Google NotebookLM for research, knowledge management, and automation."
+                },
+                {
+                  id: "jr-8",
+                  dateAdded: "2026-04-16",
+                  type: "youtube",
+                  title: "Is Claude Getting Dumber?",
+                  url: "https://www.youtube.com/watch?v=ULKEyTxRZ5s",
+                  duration: "~15 min",
+                  description: "Jack investigates whether Claude's reasoning has actually declined — what's happening under the hood and what it means for builders and automation workflows."
+                },
+                {
+                  id: "jr-12",
+                  dateAdded: "2026-04-16",
+                  type: "youtube",
+                  title: "Claude Code 2.0 Is Here... Automate Anything",
+                  url: "https://www.youtube.com/watch?v=efGXZselN64",
+                  duration: "~20 min",
+                  description: "What's new in Claude Code 2.0 and how to automate any business process with it — Jack's full breakdown."
+                },
+                {
+                  id: "jr-13",
+                  dateAdded: "2026-04-14",
+                  type: "youtube",
+                  title: "Claude Code Design just became UNSTOPPABLE",
+                  url: "https://www.youtube.com/watch?v=z9CwM-DAe5Q",
+                  duration: "~15 min",
+                  description: "The Claude Code + Design combination that Jack says is the most powerful creative tool he's ever used."
+                },
+                {
+                  id: "jr-14",
+                  dateAdded: "2026-04-12",
+                  type: "youtube",
+                  title: "Claude Code + SeedDance 2.0 = Cinematic $10k Websites",
+                  url: "https://www.youtube.com/watch?v=ExL35N8RPjA",
+                  duration: "~18 min",
+                  description: "How to combine Claude Code with SeedDance 2.0 to produce cinematic, high-value websites that clients pay $10k for."
+                },
+                {
+                  id: "jr-15",
+                  dateAdded: "2026-04-11",
+                  type: "youtube",
+                  title: "Claude Code just changed Website Design Forever (Relume)",
+                  url: "https://www.youtube.com/watch?v=zTuV3chQCus",
+                  duration: "~17 min",
+                  description: "Full tutorial: Claude Code + Relume for instant professional website design — the workflow that's changing agency work."
+                },
                 {
                   id: "jr-1",
                   dateAdded: "2026-04-10",
@@ -1101,10 +1290,19 @@ const CONTENT = {
                   id: "jr-3",
                   dateAdded: "2026-04-09",
                   type: "youtube",
-                  title: "Claude Code + Pinecone 2.0 = UNSTOPPABLE Memory",
+                  title: "Claude Code just changed Memory Forever (Tutorial)",
                   url: "https://www.youtube.com/watch?v=TXcr0x9SIXA",
                   duration: "~18 min",
                   description: "Add persistent long-term memory to Claude Code using Pinecone's vector database — full walkthrough."
+                },
+                {
+                  id: "jr-9",
+                  dateAdded: "2026-04-07",
+                  type: "youtube",
+                  title: "Claude Just 10x'd How Fast You Build Agents",
+                  url: "https://www.youtube.com/watch?v=udOqE90ckiI",
+                  duration: "~18 min",
+                  description: "The new Claude capability that dramatically speeds up agent development — Jack's full breakdown of what changed and how to use it."
                 },
                 {
                   id: "jr-4",
@@ -1119,7 +1317,7 @@ const CONTENT = {
                   id: "jr-5",
                   dateAdded: "2026-04-06",
                   type: "youtube",
-                  title: "7 Claude Cowork Skills I Use Every Day (steal them)",
+                  title: "Claude Cowork just changed Marketing Forever (Tutorial)",
                   url: "https://www.youtube.com/watch?v=Vachtj-xjXI",
                   duration: "~20 min",
                   description: "Jack's daily Claude Cowork skills that run his 7-figure business — battle-tested and ready to copy."
@@ -1141,6 +1339,42 @@ const CONTENT = {
                   url: "https://www.youtube.com/watch?v=6t32nPxeJb8",
                   duration: "~16 min",
                   description: "Combine Claude Code with Google's NotebookLM to give your AI an unlimited, searchable knowledge base."
+                },
+                {
+                  id: "jr-16",
+                  dateAdded: "2026-03-13",
+                  type: "youtube",
+                  title: "AI Will Take Your Job, But The Next Phase Is Much WORSE",
+                  url: "https://www.youtube.com/watch?v=xDbNvfiHy9M",
+                  duration: "~16 min",
+                  description: "Jack's frank analysis of where AI is heading and what it means for jobs, businesses, and those who adapt now."
+                },
+                {
+                  id: "jr-17",
+                  dateAdded: "2026-03-02",
+                  type: "youtube",
+                  title: "I Replaced n8n With Claude Code (AI Agents Got 10x Easier)",
+                  url: "https://www.youtube.com/watch?v=Vmb1FtsgdjU",
+                  duration: "~20 min",
+                  description: "Why Jack abandoned n8n for Claude Code — and how agent building became dramatically simpler overnight."
+                },
+                {
+                  id: "jr-18",
+                  dateAdded: "2026-02-19",
+                  type: "youtube",
+                  title: "The NEW Way to Build AI Automations in 2026 (Antigravity)",
+                  url: "https://www.youtube.com/watch?v=8MVRda34vjQ",
+                  duration: "~18 min",
+                  description: "Jack's deep dive into Antigravity as the new standard for AI automation in 2026 — why it beats the old tools."
+                },
+                {
+                  id: "jr-19",
+                  dateAdded: "2026-01-18",
+                  type: "youtube",
+                  title: "DON'T Build workflows, Build AI Systems (AntiGravity)",
+                  url: "https://www.youtube.com/watch?v=2IBN7ArkAkU",
+                  duration: "~22 min",
+                  description: "Jack's paradigm shift: stop thinking in workflows, start building AI systems — the AntiGravity approach explained."
                 }
               ]
             }
@@ -1159,8 +1393,26 @@ const CONTENT = {
             {
               id: "liam-latest",
               name: "Latest Drops",
-              timeline: "Feb–Mar 2026",
+              timeline: "Jan–Apr 2026",
               resources: [
+                {
+                  id: "lo-9",
+                  dateAdded: "2026-04-17",
+                  type: "youtube",
+                  title: "keeping up with AI is making you fall behind (just focus on this one thing)",
+                  url: "https://www.youtube.com/watch?v=3LqntdbOWts",
+                  duration: "~15 min",
+                  description: "Liam's counter-intuitive take on AI content overload — why staying current on every release is hurting your results."
+                },
+                {
+                  id: "lo-10",
+                  dateAdded: "2026-04-13",
+                  type: "youtube",
+                  title: "how to sell $5,000 Claude Code AIOS to SMBs (full breakdown)",
+                  url: "https://www.youtube.com/watch?v=yd9tr0xqg-Y",
+                  duration: "~30 min",
+                  description: "Liam's complete playbook for packaging Claude Code as an AI Operating System and selling it to small businesses for $5,000."
+                },
                 {
                   id: "lo-1",
                   dateAdded: "2026-03-22",
@@ -1207,6 +1459,24 @@ const CONTENT = {
                   description: "How Liam runs his entire 7-figure business from his phone using AI automation and Claude Code."
                 },
                 {
+                  id: "lo-11",
+                  dateAdded: "2026-02-25",
+                  type: "youtube",
+                  title: "I've been called crazy before…",
+                  url: "https://www.youtube.com/watch?v=ykRToEkWvpA",
+                  duration: "~12 min",
+                  description: "Liam's candid take on the bold predictions he's making about AI and business — and why he's doubling down on them."
+                },
+                {
+                  id: "lo-12",
+                  dateAdded: "2026-02-24",
+                  type: "youtube",
+                  title: "OpenClaw Will Never Actually Run Your Business… Try This Instead.",
+                  url: "https://www.youtube.com/watch?v=qJg3CuqEvek",
+                  duration: "~18 min",
+                  description: "Why Liam thinks OpenClaw falls short for real business operations — and the alternative he recommends instead."
+                },
+                {
                   id: "lo-6",
                   dateAdded: "2026-02-23",
                   type: "youtube",
@@ -1216,6 +1486,42 @@ const CONTENT = {
                   description: "Liam's 30-day roadmap for automating the majority of his business operations using Claude Code."
                 },
                 {
+                  id: "lo-8",
+                  dateAdded: "2026-02-23",
+                  type: "youtube",
+                  title: "The Easiest Software Business to Start in 2026",
+                  url: "https://www.youtube.com/watch?v=KAufsCas_F4",
+                  duration: "~25 min",
+                  description: "Liam breaks down the simplest path to a profitable software business with AI in 2026 — host a 24/7 agent on Hostinger and start selling immediately."
+                },
+                {
+                  id: "lo-13",
+                  dateAdded: "2026-02-21",
+                  type: "youtube",
+                  title: "AGI Is Here. It's Real. And It Changes Everything — Here's My Plan",
+                  url: "https://www.youtube.com/watch?v=GyCNs5AymRw",
+                  duration: "~20 min",
+                  description: "Liam's response to the AGI moment — his personal plan for what to build, sell, and position for in 2026."
+                },
+                {
+                  id: "lo-14",
+                  dateAdded: "2026-02-18",
+                  type: "youtube",
+                  title: "3 years into the AI Agency model. Where it's all going…",
+                  url: "https://www.youtube.com/watch?v=8JLyq_-3n58",
+                  duration: "~25 min",
+                  description: "Liam reflects on three years of building AI agencies — what's working, what's changing, and where the model is heading."
+                },
+                {
+                  id: "lo-15",
+                  dateAdded: "2026-02-13",
+                  type: "youtube",
+                  title: "AI Just Had It's iPhone Moment...(Here's How to WIN)",
+                  url: "https://www.youtube.com/watch?v=qNtDxuLfFE8",
+                  duration: "~18 min",
+                  description: "The AI inflection point Liam says rivals the iPhone launch — and exactly how to position yourself to win in this moment."
+                },
+                {
                   id: "lo-7",
                   dateAdded: "2026-02-12",
                   type: "youtube",
@@ -1223,6 +1529,42 @@ const CONTENT = {
                   url: "https://www.youtube.com/watch?v=2bsfQThGXxc",
                   duration: "~60 min",
                   description: "Complete beginner's guide to using Claude Code for life and business automation — start here if you're new."
+                },
+                {
+                  id: "lo-16",
+                  dateAdded: "2026-01-26",
+                  type: "youtube",
+                  title: "Clawdbot Will Make New Millionaires in 2026, here how (INSANE)",
+                  url: "https://www.youtube.com/watch?v=PrWZe0VmnGg",
+                  duration: "~20 min",
+                  description: "Liam breaks down the ClawdBot opportunity and exactly how early movers can build life-changing businesses with it in 2026."
+                },
+                {
+                  id: "lo-17",
+                  dateAdded: "2026-01-24",
+                  type: "youtube",
+                  title: "Did Claude Just Replace Video Editors? (Remotion Breakdown)",
+                  url: "https://www.youtube.com/watch?v=Tt-hpp87pd0",
+                  duration: "~15 min",
+                  description: "Liam tests Claude + Remotion for AI video editing — can it actually replace professional video editors?"
+                },
+                {
+                  id: "lo-18",
+                  dateAdded: "2026-01-14",
+                  type: "youtube",
+                  title: "How to Turn LinkedIn into a Personal Brand Lead Magnet with AI",
+                  url: "https://www.youtube.com/watch?v=3iR3kHxCwfo",
+                  duration: "~20 min",
+                  description: "Liam's system for using AI to build a LinkedIn presence that generates consistent inbound leads for your agency."
+                },
+                {
+                  id: "lo-19",
+                  dateAdded: "2026-01-08",
+                  type: "youtube",
+                  title: "How to Automate Your Work with Claude Code (Beginner Breakdown)",
+                  url: "https://www.youtube.com/watch?v=oC0mPBSmzfQ",
+                  duration: "~25 min",
+                  description: "Liam's beginner-friendly breakdown of how to start automating real work with Claude Code — the first video to watch if you're starting from zero."
                 }
               ]
             }
