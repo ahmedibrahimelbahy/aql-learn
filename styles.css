@@ -2556,6 +2556,17 @@ nav {
   .admin-mini-bar { width: 80px; }
 }
 
+/* Labels inside the join modal */
+.join-label {
+  display: block;
+  font-family: var(--f-mono);
+  font-size: 0.62rem;
+  color: var(--cyan);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 0.4rem;
+}
+
 /* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

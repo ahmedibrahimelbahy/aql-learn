@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles.css?v=neural-5">
+  <link rel="stylesheet" href="styles.css?v=neural-6">
 </head>
 <body>
 
@@ -154,13 +154,15 @@
         <p>Enter the class code from your instructor, a callsign, and a password.</p>
       </div>
       <div class="modal-body">
-        <input id="join-code" class="modal-input" placeholder="Class code" maxlength="40" autocomplete="off"
+        <label class="join-label">Class code</label>
+        <input id="join-code" class="modal-input" placeholder="e.g. AQL-SPRING-26" maxlength="40" autocomplete="off"
                onkeydown="if(event.key==='Enter') submitJoinModal()">
-        <input id="join-name" class="modal-input" placeholder="Callsign (e.g. Ahmed)" maxlength="40" autocomplete="off"
-               style="margin-top:0.7rem"
+        <label class="join-label" style="margin-top:0.9rem">Your name (no email)</label>
+        <input id="join-name" class="modal-input" placeholder="e.g. Ahmed" maxlength="40" autocomplete="off"
                onkeydown="if(event.key==='Enter') submitJoinModal()">
-        <input id="join-password" type="password" class="modal-input" placeholder="Password (6+ characters)"
-               autocomplete="current-password" style="margin-top:0.7rem"
+        <label class="join-label" style="margin-top:0.9rem">Password (make one up · 6+ chars)</label>
+        <input id="join-password" type="password" class="modal-input" placeholder="••••••"
+               autocomplete="current-password"
                onkeydown="if(event.key==='Enter') submitJoinModal()">
         <div class="modal-error" id="join-error"></div>
       </div>
@@ -173,9 +175,9 @@
 
   <!-- ========== SCRIPTS ========== -->
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-  <script src="supabase.js?v=neural-5"></script>
-  <script src="content.js?v=neural-5"></script>
-  <script src="admin.js?v=neural-5"></script>
-  <script src="app.js?v=neural-5"></script>
+  <script src="supabase.js?v=neural-6"></script>
+  <script src="content.js?v=neural-6"></script>
+  <script src="admin.js?v=neural-6"></script>
+  <script src="app.js?v=neural-6"></script>
 </body>
 </html>
