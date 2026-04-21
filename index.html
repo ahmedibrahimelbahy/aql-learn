@@ -3,23 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AQL Learn — Structured AI learning roadmaps for Automation and Development. Curated videos, articles, and timelines.">
-  <title>AQL Learn — AI Learning Platform</title>
+  <meta name="description" content="AQL Learn — Neural Command Center for AI mastery. Structured tracks for automation, development, content, and Claude.">
+  <title>AQL Learn — Neural Command Center</title>
 
-  <!-- Fonts -->
+  <!-- Fonts: Chakra Petch (display) + Geist + Geist Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=neural-2">
 </head>
 <body>
+
+  <!-- ========== AMBIENT ATMOSPHERE ========== -->
+  <div class="atmosphere" aria-hidden="true"></div>
+
+  <!-- Reusable SVG defs (gradients for rings etc.) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00e5ff"/>
+        <stop offset="100%" stop-color="#ff2bd6"/>
+      </linearGradient>
+      <linearGradient id="successGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00ff9d"/>
+        <stop offset="100%" stop-color="#00e5ff"/>
+      </linearGradient>
+    </defs>
+  </svg>
 
   <!-- ========== NAVIGATION ========== -->
   <nav>
     <div class="nav-brand" onclick="Router.navigate('home')" title="AQL Learn Home">
-      AQL Learn
+      AQL_LEARN<span class="nav-brand-mark">// v2.0</span>
     </div>
     <div class="nav-breadcrumb" id="breadcrumb"></div>
     <div class="nav-profile" id="profile-widget">
@@ -33,21 +49,38 @@
   <div class="view" id="view-home">
     <div class="container">
       <div class="hero">
-        <div class="hero-tag">AQL AI Learning Platform</div>
-        <h1>Learn AI.<br><span>Build the Future.</span></h1>
-        <p>Structured roadmaps, curated videos, and essential resources to take you from zero to building real AI-powered products.</p>
-        <div class="hero-stats" id="hero-stats">
-          <!-- Populated by app.js -->
-        </div>
+        <div class="hero-tag">AQL AI LEARNING PROTOCOL</div>
+        <h1>
+          <span class="hero-line-1" id="hero-line-1"></span>
+          <span class="hero-line-2" id="hero-line-2"></span>
+        </h1>
+        <p>Structured roadmaps, curated transmissions, and essential intel to take you from zero to building real AI-powered systems.</p>
+        <div class="hero-stats" id="hero-stats"></div>
       </div>
 
       <div class="section-header">
-        <h2>Choose your learning path</h2>
-        <p>Select a pillar to explore structured tracks and start learning.</p>
+        <div class="section-header-inner">
+          <h2>Select Learning Path</h2>
+          <p>Choose a pillar to explore tracks and begin transmission</p>
+        </div>
+        <div class="view-toggle" role="tablist">
+          <button class="view-toggle-btn active" id="toggle-grid" onclick="setHomeMode('grid')">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="currentColor" aria-hidden="true"><rect x="0" y="0" width="4" height="4"/><rect x="7" y="0" width="4" height="4"/><rect x="0" y="7" width="4" height="4"/><rect x="7" y="7" width="4" height="4"/></svg>
+            Grid
+          </button>
+          <button class="view-toggle-btn" id="toggle-map" onclick="setHomeMode('map')">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="currentColor" aria-hidden="true"><polygon points="5.5,0 10,2.75 10,8.25 5.5,11 1,8.25 1,2.75"/></svg>
+            Map
+          </button>
+        </div>
       </div>
 
-      <div class="pillar-grid" id="pillar-grid">
-        <!-- Populated by app.js -->
+      <div class="pillar-grid" id="pillar-grid"></div>
+
+      <div class="constellation-wrap" id="constellation-wrap" style="display:none">
+        <div class="constellation-label">Neural Map · Active Tracks</div>
+        <svg id="constellation-svg" viewBox="0 0 1200 620" preserveAspectRatio="xMidYMid slice"></svg>
+        <div class="constellation-coords" id="constellation-coords">X 000.00 · Y 000.00</div>
       </div>
     </div>
   </div>
@@ -55,27 +88,21 @@
   <!-- ========== VIEW: PILLAR ========== -->
   <div class="view" id="view-pillar">
     <div class="container">
-      <button class="btn-back" onclick="Router.navigate('home')">
-        ← Back to Pillars
-      </button>
+      <button class="btn-back" onclick="Router.navigate('home')">Return to Hub</button>
       <div class="page-header">
         <h1 id="pillar-title"></h1>
         <p id="pillar-desc"></p>
+        <div class="page-meta" id="pillar-meta"></div>
       </div>
-      <div class="subtrack-grid" id="subtrack-grid">
-        <!-- Populated by app.js -->
-      </div>
+      <div class="subtrack-grid" id="subtrack-grid"></div>
     </div>
   </div>
 
   <!-- ========== VIEW: TRACK ========== -->
   <div class="view" id="view-track">
     <div class="container">
-      <button class="btn-back" id="track-back-btn">
-        ← Back
-      </button>
+      <button class="btn-back" id="track-back-btn">Return to Pillar</button>
 
-      <!-- Track header -->
       <div class="page-header">
         <div class="track-header-inner">
           <div class="track-big-icon" id="track-icon"></div>
@@ -85,51 +112,52 @@
         <div class="page-meta" id="track-meta"></div>
       </div>
 
-      <!-- Overall progress summary -->
+      <!-- Overall progress -->
       <div class="overall-progress">
-        <div class="progress-stat">
-          <div class="progress-stat-number" id="stat-completed">0</div>
-          <div class="progress-stat-label">Completed</div>
-        </div>
-        <div class="progress-divider"></div>
-        <div class="progress-stat">
-          <div class="progress-stat-number" id="stat-total">0</div>
-          <div class="progress-stat-label">Resources</div>
-        </div>
-        <div class="progress-divider"></div>
-        <div class="progress-stat">
-          <div class="progress-stat-number" id="stat-pct">0%</div>
-          <div class="progress-stat-label">Complete</div>
-        </div>
-        <div class="progress-bar-wrap">
-          <div class="progress-bar-label">Track Progress</div>
-          <div class="progress-bar">
-            <div class="progress-fill" id="track-progress-fill" style="width: 0%"></div>
+        <div class="progress-header">
+          <div class="progress-header-left">
+            <div class="progress-stat">
+              <span class="progress-stat-number" id="stat-completed">0</span>
+              <span class="progress-stat-slash">/</span>
+              <span class="progress-stat-number" id="stat-total">0</span>
+              <span class="progress-stat-label">Complete</span>
+            </div>
+            <div class="progress-stat">
+              <span class="progress-stat-number" id="stat-pct">0%</span>
+              <span class="progress-stat-label">Mastery</span>
+            </div>
           </div>
+          <div class="progress-bar-label">Track Progress</div>
         </div>
+        <div class="segment-bar" id="segment-bar"></div>
       </div>
 
-      <!-- Roadmap timeline -->
-      <div class="timeline" id="timeline">
-        <!-- Populated by app.js -->
-      </div>
+      <!-- Timeline -->
+      <div class="timeline" id="timeline"></div>
     </div>
   </div>
 
   <!-- ========== PROFILE MODAL ========== -->
   <div class="modal-overlay" id="profile-modal">
     <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-scan"></div>
       <div class="modal-header">
-        <div class="modal-icon">👤</div>
-        <h2 id="modal-title">Create your profile</h2>
-        <p>Enter your name to track your progress on this device.</p>
+        <div class="modal-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <circle cx="12" cy="8" r="4"/>
+            <path d="M4 21c0-4.5 3.5-8 8-8s8 3.5 8 8"/>
+          </svg>
+        </div>
+        <div class="modal-label">Identity Registration</div>
+        <h2 id="modal-title">Create Profile</h2>
+        <p>Register a callsign to sync your progress on this device.</p>
       </div>
       <div class="modal-body">
         <input
           type="text"
           id="profile-name-input"
           class="modal-input"
-          placeholder="Your name (e.g. Ahmed)"
+          placeholder="Callsign (e.g. Ahmed)"
           maxlength="40"
           onkeydown="if(event.key==='Enter') submitProfileModal()"
           autocomplete="off"
@@ -138,20 +166,20 @@
           type="tel"
           id="profile-pin-input"
           class="modal-input"
-          placeholder="Optional 4-digit PIN"
+          placeholder="Optional 4-digit access code"
           maxlength="4"
           inputmode="numeric"
           pattern="[0-9]*"
           onkeydown="if(event.key==='Enter') submitProfileModal()"
           autocomplete="off"
-          style="margin-top: 0.75rem;"
+          style="margin-top: 0.7rem;"
         >
         <div class="modal-error" id="profile-name-error"></div>
       </div>
       <div class="modal-footer">
         <button class="modal-btn-cancel" id="profile-modal-cancel"
                 onclick="closeProfileModal()">Cancel</button>
-        <button class="modal-btn-confirm" onclick="submitProfileModal()">Confirm</button>
+        <button class="modal-btn-confirm" onclick="submitProfileModal()">Initialize</button>
       </div>
     </div>
   </div>
@@ -159,8 +187,15 @@
   <!-- ========== PIN MODAL ========== -->
   <div class="modal-overlay" id="pin-modal">
     <div class="modal-box" role="dialog" aria-modal="true">
+      <div class="modal-scan"></div>
       <div class="modal-header">
-        <div class="modal-icon">🔒</div>
+        <div class="modal-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7">
+            <rect x="4" y="10" width="16" height="11" rx="1"/>
+            <path d="M8 10V7a4 4 0 0 1 8 0v3"/>
+          </svg>
+        </div>
+        <div class="modal-label">Access Control</div>
         <h2 id="pin-modal-label">Enter PIN</h2>
       </div>
       <div class="modal-body">
@@ -184,7 +219,7 @@
   </div>
 
   <!-- ========== SCRIPTS ========== -->
-  <script src="content.js"></script>
-  <script src="app.js"></script>
+  <script src="content.js?v=neural-2"></script>
+  <script src="app.js?v=neural-2"></script>
 </body>
 </html>
