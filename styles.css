@@ -880,27 +880,27 @@ nav {
   opacity: 0.6;
 }
 
-/* Pillar-to-pillar connecting path */
-.pillar-connector {
+/* Pillar core → track spoke */
+.spoke-line {
   stroke: var(--cyan);
   stroke-width: 1;
-  stroke-dasharray: 6 6;
-  opacity: 0.55;
-  animation: connector-dash 1.8s linear infinite;
+  stroke-dasharray: 5 5;
+  opacity: 0.5;
+  animation: connector-dash 2s linear infinite;
   pointer-events: none;
 }
 
-.pillar-connector-glow {
+.spoke-glow {
   stroke: var(--cyan);
-  stroke-width: 4;
+  stroke-width: 3;
   opacity: 0.08;
-  filter: blur(2px);
+  filter: blur(1.5px);
   pointer-events: none;
 }
 
 @keyframes connector-dash {
   from { stroke-dashoffset: 0; }
-  to   { stroke-dashoffset: -24; }
+  to   { stroke-dashoffset: -20; }
 }
 
 .data-packet {

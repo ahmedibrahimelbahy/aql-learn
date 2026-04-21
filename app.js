@@ -572,21 +572,6 @@ function renderConstellation() {
 
   let out = '';
 
-  // Connecting constellation path between pillar cores
-  for (let i = 0; i < positions.length - 1; i++) {
-    const a = positions[i], b = positions[i + 1];
-    // Base glow line
-    out += `<line class="pillar-connector-glow" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`;
-    // Dashed animated line
-    out += `<line class="pillar-connector" x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}"/>`;
-    // Data packet that travels the line
-    const dx = b.x - a.x, dy = b.y - a.y;
-    const dist = Math.sqrt(dx * dx + dy * dy);
-    out += `<circle class="data-packet" r="2.2">`;
-    out += `<animateMotion dur="${(dist / 140).toFixed(2)}s" repeatCount="indefinite" begin="${(i * 0.8).toFixed(2)}s" path="M${a.x},${a.y} L${b.x},${b.y}"/>`;
-    out += `</circle>`;
-  }
-
   // Render each pillar cluster
   pillars.forEach((pillar, pi) => {
     const { x, y } = positions[pi];
@@ -602,6 +587,13 @@ function renderConstellation() {
       const ty = y + Math.sin(angle) * 78;
       const stats = Progress.getTrackStats(track.id);
       const completed = stats.pct === 100;
+
+      // Spoke: pillar core → track (soft glow + dashed animated line + traveling packet)
+      out += `<line class="spoke-glow" x1="${x}" y1="${y}" x2="${tx}" y2="${ty}"/>`;
+      out += `<line class="spoke-line" x1="${x}" y1="${y}" x2="${tx}" y2="${ty}"/>`;
+      out += `<circle class="data-packet" r="1.8">`;
+      out += `<animateMotion dur="2.4s" repeatCount="indefinite" begin="${(ti * 0.3).toFixed(2)}s" path="M${x},${y} L${tx},${ty}"/>`;
+      out += `</circle>`;
 
       // Resource dots in a tight cluster around each track
       track.phases.forEach((phase, phi) => {
