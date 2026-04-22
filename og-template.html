@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AQL Learn OG</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; overflow: hidden; background: #04060e; font-family: 'Chakra Petch', sans-serif; color: #e8edf5; }
+
+    .canvas {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      background: radial-gradient(circle at 30% 40%, rgba(0, 229, 255, 0.12), transparent 60%),
+                  radial-gradient(circle at 80% 70%, rgba(255, 43, 214, 0.08), transparent 55%),
+                  #04060e;
+      overflow: hidden;
+    }
+
+    /* Perspective grid floor */
+    .grid-floor {
+      position: absolute;
+      left: -20%;
+      right: -20%;
+      bottom: -60%;
+      height: 130%;
+      background-image:
+        linear-gradient(rgba(0, 229, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 229, 255, 0.1) 1px, transparent 1px);
+      background-size: 70px 70px;
+      transform: perspective(520px) rotateX(64deg);
+      transform-origin: center top;
+      mask-image: linear-gradient(to top, black 10%, transparent 80%);
+      -webkit-mask-image: linear-gradient(to top, black 10%, transparent 80%);
+    }
+
+    /* Scanlines */
+    .scanlines {
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(0deg,
+        transparent 0, transparent 2px,
+        rgba(0, 229, 255, 0.03) 2px, rgba(0, 229, 255, 0.03) 4px);
+      mix-blend-mode: screen;
+    }
+
+    /* Corner brackets */
+    .bracket {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 2px solid #00e5ff;
+      opacity: 0.7;
+    }
+    .bracket.tl { top: 40px; left: 40px; border-right: none; border-bottom: none; }
+    .bracket.tr { top: 40px; right: 40px; border-left: none; border-bottom: none; }
+    .bracket.bl { bottom: 40px; left: 40px; border-right: none; border-top: none; }
+    .bracket.br { bottom: 40px; right: 40px; border-left: none; border-top: none; }
+
+    .content {
+      position: absolute;
+      top: 50%;
+      left: 80px;
+      right: 80px;
+      transform: translateY(-50%);
+      z-index: 5;
+    }
+
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .brand-hex {
+      width: 28px;
+      height: 32px;
+      background: #00e5ff;
+      clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+      box-shadow: 0 0 20px rgba(0, 229, 255, 0.7);
+    }
+
+    .brand-name {
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: 0.04em;
+      color: #e8edf5;
+    }
+
+    .brand-mark {
+      font-family: 'Geist Mono', monospace;
+      font-size: 15px;
+      color: #7a8699;
+      letter-spacing: 0.14em;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 14px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #00e5ff;
+      padding: 8px 16px;
+      border: 1px solid rgba(0, 229, 255, 0.4);
+      background: rgba(0, 229, 255, 0.05);
+      margin-bottom: 28px;
+    }
+
+    .tag::before { content: '◉'; }
+
+    h1 {
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 108px;
+      line-height: 0.98;
+      letter-spacing: -0.035em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .line1 { color: #e8edf5; display: block; }
+    .line2 {
+      display: block;
+      background: linear-gradient(92deg, #00e5ff 0%, #5ff4ff 40%, #ff2bd6 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.35));
+    }
+
+    .subcopy {
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 500;
+      font-size: 26px;
+      color: #94a3b8;
+      max-width: 820px;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      margin-bottom: 44px;
+    }
+
+    /* Pillar hexagons (right side) */
+    .hex-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: absolute;
+      bottom: 80px;
+      left: 80px;
+    }
+
+    .hex {
+      width: 52px;
+      height: 58px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 229, 255, 0.08);
+      border: 1px solid rgba(0, 229, 255, 0.4);
+      clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      color: #00e5ff;
+      letter-spacing: -0.02em;
+    }
+
+    .hex-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      color: #7a8699;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-left: 8px;
+    }
+
+    /* Stats on the right side */
+    .stats {
+      position: absolute;
+      bottom: 80px;
+      right: 80px;
+      display: flex;
+      gap: 32px;
+    }
+
+    .stat { text-align: right; }
+
+    .stat-num {
+      font-family: 'Chakra Petch', sans-serif;
+      font-weight: 700;
+      font-size: 42px;
+      color: #e8edf5;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-family: 'Geist Mono', monospace;
+      font-size: 11px;
+      color: #7a8699;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    /* Signal pulse in top-right */
+    .signal {
+      position: absolute;
+      top: 60px;
+      right: 130px;
+      font-family: 'Geist Mono', monospace;
+      font-size: 12px;
+      color: #00e5ff;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .signal::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #00ff9d;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #00ff9d;
+    }
+  </style>
+</head>
+<body>
+  <div class="canvas">
+    <div class="grid-floor"></div>
+    <div class="scanlines"></div>
+
+    <div class="bracket tl"></div>
+    <div class="bracket tr"></div>
+    <div class="bracket bl"></div>
+    <div class="bracket br"></div>
+
+    <div class="signal">LIVE · AQL AI LEARNING PROTOCOL</div>
+
+    <div class="content">
+      <div class="brand-row">
+        <div class="brand-hex"></div>
+        <div class="brand-name">AQL_LEARN</div>
+        <div class="brand-mark">// v2.0</div>
+      </div>
+
+      <h1>
+        <span class="line1">LEARN AI.</span>
+        <span class="line2">BUILD THE FUTURE.</span>
+      </h1>
+
+      <div class="subcopy">Structured video tracks from the top AI creators — Nate Herk, Jack Roberts, Liam Ottley — plus official Anthropic courses.</div>
+    </div>
+
+    <div class="hex-row">
+      <div class="hex">★</div>
+      <div class="hex">N</div>
+      <div class="hex">J</div>
+      <div class="hex">L</div>
+      <div class="hex">◆</div>
+      <div class="hex-label">4 pillars · 10 tracks</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">99</div>
+        <div class="stat-label">Videos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">2026</div>
+        <div class="stat-label">Current</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
