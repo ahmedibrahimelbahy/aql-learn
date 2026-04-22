@@ -550,8 +550,11 @@ const Views = {
     document.getElementById('subtrack-grid').innerHTML = pillar.subtracks.map(track => {
       const stats = Progress.getTrackStats(track.id);
       const totalPhases = track.phases.length;
+      const initialFallback = track.id.endsWith('-channel')
+        ? `<span class=&quot;creator-initial&quot;>${esc(track.name.charAt(0))}</span>`
+        : `<span style=&quot;font-size:1.4rem&quot;>${esc(track.icon)}</span>`;
       const iconHtml = track.avatar
-        ? `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar">`
+        ? `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar" onerror="this.outerHTML='${initialFallback}'">`
         : (track.id.endsWith('-channel')
           ? `<span class="creator-initial">${esc(track.name.charAt(0))}</span>`
           : (ICONS[track.id] || `<span style="font-size:1.4rem">${esc(track.icon)}</span>`));
@@ -594,7 +597,10 @@ const Views = {
 
     const trackIconEl = document.getElementById('track-icon');
     if (track.avatar) {
-      trackIconEl.innerHTML = `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar">`;
+      const fallback = track.id.endsWith('-channel')
+        ? `<span class=&quot;creator-initial large&quot;>${esc(track.name.charAt(0))}</span>`
+        : `<span style=&quot;font-size:1.6rem&quot;>${esc(track.icon)}</span>`;
+      trackIconEl.innerHTML = `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar" onerror="this.outerHTML='${fallback}'">`;
     } else if (track.id.endsWith('-channel')) {
       trackIconEl.innerHTML = `<span class="creator-initial large">${esc(track.name.charAt(0))}</span>`;
     } else {
