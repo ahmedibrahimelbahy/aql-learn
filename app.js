@@ -112,9 +112,15 @@ function renderRing(pct, size = 44, stroke = 2, showLabel = true) {
 }
 
 function typeWriter(el, text, speed = 55, onDone) {
+  // Cancel any in-flight typing on this element so we never interleave
+  if (el._twToken) el._twToken.cancelled = true;
+  const token = { cancelled: false };
+  el._twToken = token;
+
   el.textContent = '';
   let i = 0;
   (function step() {
+    if (token.cancelled) return;
     if (i >= text.length) { if (onDone) onDone(); return; }
     el.textContent += text.charAt(i++);
     setTimeout(step, speed);
