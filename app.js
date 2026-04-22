@@ -546,7 +546,9 @@ const Views = {
       const totalPhases = track.phases.length;
       const iconHtml = track.avatar
         ? `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar">`
-        : (ICONS[track.id] || `<span style="font-size:1.4rem">${esc(track.icon)}</span>`);
+        : (track.id.endsWith('-channel')
+          ? `<span class="creator-initial">${esc(track.name.charAt(0))}</span>`
+          : (ICONS[track.id] || `<span style="font-size:1.4rem">${esc(track.icon)}</span>`));
 
       return `
         <div class="subtrack-card" onclick="Router.navigate('track/${esc(track.id)}')">
@@ -587,6 +589,8 @@ const Views = {
     const trackIconEl = document.getElementById('track-icon');
     if (track.avatar) {
       trackIconEl.innerHTML = `<img src="${esc(track.avatar)}" alt="${esc(track.name)}" class="creator-avatar">`;
+    } else if (track.id.endsWith('-channel')) {
+      trackIconEl.innerHTML = `<span class="creator-initial large">${esc(track.name.charAt(0))}</span>`;
     } else {
       trackIconEl.innerHTML = ICONS[track.id] || `<span style="font-size:1.6rem">${esc(track.icon)}</span>`;
     }
