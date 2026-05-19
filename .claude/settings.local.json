@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -e \"const http=require\\('http'\\),fs=require\\('fs'\\),path=require\\('path'\\);http.createServer\\(\\(req,res\\)=>{let f=path.join\\('D:/Projects/AQL Learn',req.url==='/'?'/index.html':req.url\\);fs.readFile\\(f,\\(e,d\\)=>{if\\(e\\){res.writeHead\\(404\\);res.end\\(\\);}else{const ext=path.extname\\(f\\);const t={'html':'text/html','js':'application/javascript','css':'text/css'}[ext.slice\\(1\\)]||'text/plain';res.writeHead\\(200,{'Content-Type':t}\\);res.end\\(d\\);}}\\);}\\).listen\\(3000,\\(\\)=>console.log\\('Serving on http://localhost:3000'\\)\\);\")",
+      "Bash(node *)",
+      "Bash(start *)",
+      "mcp__plugin_playwright_playwright__browser_resize",
+      "Bash(python -m http.server 8765)",
+      "Bash(python -m http.server 9876)",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "mcp__plugin_playwright_playwright__browser_wait_for",
+      "Bash(grep -E \"\\\\.png$\")",
+      "Bash(kill bp2fvljgc *)",
+      "Bash(kill bv54g8jl6 *)",
+      "Bash(kill bt5yajezd *)",
+      "mcp__plugin_playwright_playwright__browser_close",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(kill bttvogure *)",
+      "Bash(git commit -m 'copy: stop calling it a callsign in the modal description *)",
+      "Bash(git commit -m 'copy: generic placeholders so real class code isn'\\\\''t leaked in the UI *)",
+      "Bash(kill b0z91dth7 *)",
+      "Bash(kill bphiqvs2g *)",
+      "Bash(python -m http.server 9877)",
+      "Bash(kill baew08oco *)"
+    ]
+  }
+}

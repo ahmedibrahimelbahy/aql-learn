@@ -1,0 +1,15 @@
+{
+  "name": "aql-learn-content-updater",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "update": "node update-content.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
